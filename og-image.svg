@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#070a0f"/>
+      <stop offset="0.55" stop-color="#0b111c"/>
+      <stop offset="1" stop-color="#061018"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="0.5" stop-color="#24d3ee"/>
+      <stop offset="1" stop-color="#55f2b2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.16" stroke="#ffffff">
+    <path d="M0 96h1200M0 180h1200M0 264h1200M0 348h1200M0 432h1200M0 516h1200"/>
+    <path d="M96 0v630M180 0v630M264 0v630M348 0v630M432 0v630M516 0v630M600 0v630M684 0v630M768 0v630M852 0v630M936 0v630M1020 0v630M1104 0v630"/>
+  </g>
+  <rect x="72" y="72" width="1056" height="486" rx="28" fill="#0d131e" opacity="0.84" stroke="#24d3ee" stroke-opacity="0.35"/>
+  <text x="104" y="180" fill="#24d3ee" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="6">ATOCODE</text>
+  <text x="104" y="310" fill="#f5f8ff" font-family="Arial, sans-serif" font-size="76" font-weight="800">Build faster.</text>
+  <text x="104" y="392" fill="#f5f8ff" font-family="Arial, sans-serif" font-size="76" font-weight="800">Look sharper.</text>
+  <text x="104" y="476" fill="#9aa8bc" font-family="Arial, sans-serif" font-size="32">Web development, UI design, hosting, and care.</text>
+  <circle cx="940" cy="258" r="80" fill="none" stroke="url(#accent)" stroke-width="12"/>
+  <path d="M895 374h170" stroke="url(#accent)" stroke-width="12" stroke-linecap="round"/>
+</svg>

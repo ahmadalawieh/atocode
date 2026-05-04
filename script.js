@@ -124,3 +124,38 @@ function roundRect(ctx, x, y, width, height, radius) {
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
 requestAnimationFrame(drawSystem);
+
+const contactForm = document.querySelector("#contactForm");
+const formNote = document.querySelector("#formNote");
+
+contactForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(contactForm);
+  const name = formData.get("name")?.toString().trim();
+  const email = formData.get("email")?.toString().trim();
+  const service = formData.get("service")?.toString().trim();
+  const budget = formData.get("budget")?.toString().trim() || "Not sure yet";
+  const timeline = formData.get("timeline")?.toString().trim() || "Flexible";
+  const message = formData.get("message")?.toString().trim();
+
+  const body = [
+    `Name: ${name}`,
+    `Email: ${email}`,
+    `Service: ${service}`,
+    `Budget: ${budget}`,
+    `Timeline: ${timeline}`,
+    "",
+    "Project details:",
+    message,
+  ].join("\n");
+
+  const subject = `ATOCODE project inquiry from ${name}`;
+  const mailto = `mailto:hello@atocode.online?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  if (formNote) {
+    formNote.textContent = "Opening your email app with the inquiry prepared.";
+  }
+
+  window.location.href = mailto;
+});

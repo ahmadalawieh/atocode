@@ -602,16 +602,16 @@ h3 {
 }
 
 .contact {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 26px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(340px, 0.72fr);
+  align-items: start;
+  gap: clamp(28px, 6vw, 72px);
   padding: clamp(46px, 6vw, 78px) clamp(18px, 5vw, 72px);
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.95), rgba(36, 211, 238, 0.82));
   color: #041018;
 }
 
-.contact > div {
+.contact-copy {
   max-width: 760px;
 }
 
@@ -621,10 +621,90 @@ h3 {
 }
 
 .contact .button.primary {
-  flex: 0 0 auto;
   background: #041018;
   border-color: #041018;
   color: var(--ink);
+}
+
+.contact-form {
+  display: grid;
+  gap: 14px;
+  padding: clamp(18px, 3vw, 26px);
+  background: rgba(4, 16, 24, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  box-shadow: 0 24px 70px rgba(4, 16, 24, 0.22);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.contact-form span {
+  color: rgba(245, 248, 255, 0.78);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 13px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  color: var(--ink);
+  font: inherit;
+  outline: none;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form select {
+  color: var(--ink);
+}
+
+.contact-form option {
+  color: #041018;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(85, 242, 178, 0.72);
+  box-shadow: 0 0 0 3px rgba(85, 242, 178, 0.14);
+}
+
+.contact-form ::placeholder {
+  color: rgba(245, 248, 255, 0.46);
+}
+
+.form-submit {
+  width: 100%;
+  cursor: pointer;
+}
+
+.form-note {
+  font-size: 0.88rem;
+  text-align: center;
 }
 
 .footer {
@@ -770,6 +850,14 @@ h3 {
   .contact,
   .footer {
     align-items: flex-start;
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
     flex-direction: column;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
   }
 }

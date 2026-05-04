@@ -8,6 +8,25 @@
       name="description"
       content="ATOCODE builds modern websites, polished UI design, reliable hosting setups, and ongoing maintenance for growing businesses."
     >
+    <link rel="canonical" href="https://www.atocode.online/">
+    <meta name="theme-color" content="#070a0f">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.atocode.online/">
+    <meta property="og:title" content="ATOCODE | Web Development, UI Design, Hosting & Maintenance">
+    <meta
+      property="og:description"
+      content="Modern websites, clean UI design, dependable hosting, and ongoing care for service businesses."
+    >
+    <meta property="og:image" content="https://www.atocode.online/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ATOCODE | Web Development Studio">
+    <meta
+      name="twitter:description"
+      content="Web development, UI design, hosting setup, and maintenance by Ahmad."
+    >
+    <meta name="twitter:image" content="https://www.atocode.online/og-image.svg">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -178,17 +197,66 @@
       </section>
 
       <section class="contact" id="contact">
-        <div>
+        <div class="contact-copy">
           <p class="eyebrow">Start</p>
-          <h2>Let's build the first version of your website.</h2>
+          <h2>Tell ATOCODE what you want to build.</h2>
           <p>
-            Tell ATOCODE what you need: a new website, redesign, UI work,
-            hosting setup, or monthly maintenance.
+            Share a few details and the form will prepare a project inquiry
+            email. We can connect it to Formspree or Resend next for direct
+            submissions.
           </p>
         </div>
-        <a class="button primary" href="mailto:hello@atocode.online?subject=Project%20Inquiry%20for%20ATOCODE">
-          hello@atocode.online
-        </a>
+        <form class="contact-form" id="contactForm">
+          <div class="form-grid">
+            <label>
+              <span>Name</span>
+              <input name="name" type="text" autocomplete="name" required>
+            </label>
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" autocomplete="email" required>
+            </label>
+          </div>
+          <label>
+            <span>Service</span>
+            <select name="service" required>
+              <option value="">Choose a service</option>
+              <option>Web development</option>
+              <option>UI design</option>
+              <option>Hosting setup</option>
+              <option>Maintenance</option>
+              <option>Full launch package</option>
+            </select>
+          </label>
+          <div class="form-grid">
+            <label>
+              <span>Budget</span>
+              <select name="budget">
+                <option value="">Not sure yet</option>
+                <option>Under $500</option>
+                <option>$500 - $1,500</option>
+                <option>$1,500 - $3,000</option>
+                <option>$3,000+</option>
+              </select>
+            </label>
+            <label>
+              <span>Timeline</span>
+              <select name="timeline">
+                <option value="">Flexible</option>
+                <option>ASAP</option>
+                <option>2 - 4 weeks</option>
+                <option>1 - 2 months</option>
+                <option>Just exploring</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            <span>Project details</span>
+            <textarea name="message" rows="5" placeholder="Tell me about your business, goals, current website, or what you need help with." required></textarea>
+          </label>
+          <button class="button primary form-submit" type="submit">Prepare Inquiry</button>
+          <p class="form-note" id="formNote">Sends to hello@atocode.online through your email app for now.</p>
+        </form>
       </section>
     </main>
 
