@@ -151,7 +151,7 @@ contactForm?.addEventListener("submit", (event) => {
   ].join("\n");
 
   const subject = `ATOCODE project inquiry from ${name}`;
-  const mailto = `mailto:hello@atocode.online?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const mailto = `mailto:ahmad.alawieh77@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
   if (formNote) {
     formNote.textContent = "Opening your email app with the inquiry prepared.";

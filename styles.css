@@ -507,7 +507,7 @@ h3 {
 }
 
 .package-list article,
-.work-preview article {
+.work-preview a {
   position: relative;
   overflow: hidden;
   padding: clamp(22px, 3vw, 32px);
@@ -520,8 +520,15 @@ h3 {
     background 180ms ease;
 }
 
+.package-price {
+  display: block;
+  margin: 12px 0 22px;
+  color: var(--green);
+  font-size: 1.05rem;
+}
+
 .package-list article::after,
-.work-preview article::after {
+.work-preview a::after {
   position: absolute;
   right: 18px;
   bottom: 18px;
@@ -532,7 +539,7 @@ h3 {
 }
 
 .package-list article:hover,
-.work-preview article:hover {
+.work-preview a:hover {
   background: var(--panel-strong);
   border-color: rgba(85, 242, 178, 0.38);
   transform: translateY(-6px);
@@ -587,7 +594,7 @@ h3 {
 
 .work-preview {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -624,6 +631,33 @@ h3 {
   background: #041018;
   border-color: #041018;
   color: var(--ink);
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 13px;
+  background: rgba(4, 16, 24, 0.12);
+  border: 1px solid rgba(4, 16, 24, 0.18);
+  border-radius: 8px;
+  color: #041018;
+  font-weight: 800;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.contact-links a:hover {
+  background: rgba(4, 16, 24, 0.2);
+  transform: translateY(-2px);
 }
 
 .contact-form {
@@ -780,7 +814,8 @@ h3 {
   }
 
   .service-grid,
-  .process-list {
+  .process-list,
+  .work-preview {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
