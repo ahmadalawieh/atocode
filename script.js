@@ -24,10 +24,37 @@ function drawSystem(time = 0) {
   context.fillRect(0, 0, width, height);
 
   drawGrid(width, height, tick);
+  drawDataStreams(width, height, tick);
   drawStudioRings(width, height, pulse, tick);
   drawInterfaceCards(width, height, tick);
 
   requestAnimationFrame(drawSystem);
+}
+
+function drawDataStreams(width, height, tick) {
+  const lanes = [
+    { y: height * 0.2, speed: 0.22, color: "rgba(139,92,246,0.55)" },
+    { y: height * 0.36, speed: 0.32, color: "rgba(34,211,238,0.5)" },
+    { y: height * 0.54, speed: 0.26, color: "rgba(255,79,216,0.46)" },
+    { y: height * 0.76, speed: 0.18, color: "rgba(110,243,255,0.42)" },
+  ];
+
+  lanes.forEach((lane, laneIndex) => {
+    const offset = (tick * 110 * lane.speed + laneIndex * 70) % (width + 180);
+    for (let index = 0; index < 3; index += 1) {
+      const x = offset + index * 220 - 180;
+      const gradient = context.createLinearGradient(x, lane.y, x + 120, lane.y);
+      gradient.addColorStop(0, "rgba(255,255,255,0)");
+      gradient.addColorStop(0.5, lane.color);
+      gradient.addColorStop(1, "rgba(255,255,255,0)");
+      context.strokeStyle = gradient;
+      context.lineWidth = 2;
+      context.beginPath();
+      context.moveTo(x, lane.y);
+      context.lineTo(x + 120, lane.y);
+      context.stroke();
+    }
+  });
 }
 
 function drawGrid(width, height, tick) {
@@ -121,6 +148,22 @@ function roundRect(ctx, x, y, width, height, radius) {
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
 requestAnimationFrame(drawSystem);
+
+const siteHeader = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".menu-toggle");
+const primaryNav = document.querySelector("#primaryNav");
+
+menuToggle?.addEventListener("click", () => {
+  const isOpen = siteHeader?.classList.toggle("is-open") ?? false;
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+primaryNav?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    siteHeader?.classList.remove("is-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+  });
+});
 
 const contactForm = document.querySelector("#contactForm");
 const formNote = document.querySelector("#formNote");

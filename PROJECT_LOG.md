@@ -76,3 +76,4 @@ This file is the working memory for the ATOCODE website. Update it after every m
 - Replaced the prior neon card layout with a larger editorial dark hero, lime capability marquee, light package/work sections, row-based services, refined process cards, and responsive mobile fixes.
 - Verified desktop and mobile first-viewport screenshots locally with headless Chrome and removed temporary QA screenshots before commit.
 - Updated the accent system from lime to a more tech-forward violet, cyan, and magenta palette across CSS, canvas animation, favicon, and Open Graph image.
+- Aligned the desktop header with the same responsive page gutters as the hero, increased hero text line height, added live canvas data streams/orbiting motion, animated studio cards, and replaced the messy mobile header with a toggle dropdown menu that includes nav links plus the CTA.

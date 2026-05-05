@@ -35,11 +35,17 @@
         <span class="brand-mark">A</span>
         <span>ATOCODE</span>
       </a>
-      <nav class="nav" aria-label="Main navigation">
+      <button class="menu-toggle" type="button" aria-controls="primaryNav" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span class="sr-only">Menu</span>
+      </button>
+      <nav class="nav" id="primaryNav" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#packages">Packages</a>
         <a href="#work">Work</a>
         <a href="#contact">Contact</a>
+        <a class="mobile-nav-cta" href="#contact">Start a Project</a>
       </nav>
       <a class="header-cta" href="#contact">Start a Project</a>
     </header>
@@ -62,18 +68,20 @@
 
         <div class="hero-studio" aria-label="ATOCODE system preview">
           <canvas id="systemCanvas" width="760" height="620"></canvas>
-          <div class="studio-card studio-card-main">
+          <div class="studio-card studio-card-main float-one">
             <span>Live Stack</span>
             <strong>Design / Code / Hosting / Care</strong>
           </div>
-          <div class="studio-card studio-card-side">
+          <div class="studio-card studio-card-side float-two">
             <span>Signal</span>
             <strong>8 selected builds</strong>
           </div>
-          <div class="studio-card studio-card-bottom">
+          <div class="studio-card studio-card-bottom float-three">
             <span>Coverage</span>
             <strong>Worldwide clients</strong>
           </div>
+          <div class="studio-orbit orbit-one" aria-hidden="true"></div>
+          <div class="studio-orbit orbit-two" aria-hidden="true"></div>
         </div>
       </section>
 
