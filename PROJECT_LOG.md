@@ -75,3 +75,4 @@ This file is the working memory for the ATOCODE website. Update it after every m
 - Rebuilt the landing page design around the provided Webflow references while keeping the existing ATOCODE content, services, packages, selected work, and contact details.
 - Replaced the prior neon card layout with a larger editorial dark hero, lime capability marquee, light package/work sections, row-based services, refined process cards, and responsive mobile fixes.
 - Verified desktop and mobile first-viewport screenshots locally with headless Chrome and removed temporary QA screenshots before commit.
+- Updated the accent system from lime to a more tech-forward violet, cyan, and magenta palette across CSS, canvas animation, favicon, and Open Graph image.

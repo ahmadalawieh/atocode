@@ -58,7 +58,7 @@ function drawStudioRings(width, height, pulse, tick) {
 
   for (let index = 0; index < 5; index += 1) {
     const radius = maxRadius - index * 38 + Math.sin(tick + index) * 5;
-    context.strokeStyle = index === 0 ? "rgba(216,255,99,0.42)" : "rgba(247,247,242,0.12)";
+    context.strokeStyle = index === 0 ? "rgba(139,92,246,0.48)" : "rgba(247,247,242,0.12)";
     context.lineWidth = index === 0 ? 2.5 : 1;
     context.beginPath();
     context.ellipse(centerX, centerY, radius * 1.22, radius * 0.72, -0.38 + tick * 0.02, 0, Math.PI * 2);
@@ -66,8 +66,8 @@ function drawStudioRings(width, height, pulse, tick) {
   }
 
   const glow = context.createRadialGradient(centerX, centerY, 20, centerX, centerY, maxRadius * 1.6);
-  glow.addColorStop(0, `rgba(216,255,99,${0.16 + pulse * 0.06})`);
-  glow.addColorStop(0.5, "rgba(155,231,255,0.08)");
+  glow.addColorStop(0, `rgba(139,92,246,${0.18 + pulse * 0.06})`);
+  glow.addColorStop(0.5, "rgba(34,211,238,0.1)");
   glow.addColorStop(1, "rgba(8,9,11,0)");
   context.fillStyle = glow;
   context.fillRect(0, 0, width, height);
@@ -75,9 +75,9 @@ function drawStudioRings(width, height, pulse, tick) {
 
 function drawInterfaceCards(width, height, tick) {
   const cards = [
-    { x: width * 0.19, y: height * 0.26, w: width * 0.38, h: 92, label: "Strategy", accent: "#d8ff63" },
-    { x: width * 0.37, y: height * 0.43, w: width * 0.32, h: 104, label: "Build", accent: "#9be7ff" },
-    { x: width * 0.18, y: height * 0.63, w: width * 0.34, h: 88, label: "Care", accent: "#ff8068" },
+    { x: width * 0.19, y: height * 0.26, w: width * 0.38, h: 92, label: "Strategy", accent: "#8b5cf6" },
+    { x: width * 0.37, y: height * 0.43, w: width * 0.32, h: 104, label: "Build", accent: "#22d3ee" },
+    { x: width * 0.18, y: height * 0.63, w: width * 0.34, h: 88, label: "Care", accent: "#ff4fd8" },
   ];
 
   cards.forEach((card, index) => {

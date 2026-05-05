@@ -9,10 +9,11 @@
   --muted-dark: #5e625d;
   --line: rgba(247, 247, 242, 0.13);
   --line-dark: rgba(8, 9, 11, 0.13);
-  --lime: #d8ff63;
-  --cyan: #9be7ff;
-  --coral: #ff8068;
-  --violet: #b7a7ff;
+  --violet: #8b5cf6;
+  --cyan: #22d3ee;
+  --magenta: #ff4fd8;
+  --aqua: #6ef3ff;
+  --accent: var(--violet);
   --radius: 22px;
   --radius-lg: 34px;
   --shadow: 0 30px 90px rgba(0, 0, 0, 0.34);
@@ -93,7 +94,7 @@ textarea {
   width: 42px;
   height: 42px;
   place-items: center;
-  background: var(--lime);
+  background: linear-gradient(135deg, var(--violet), var(--cyan));
   border-radius: 50%;
   color: var(--paper);
   font-weight: 950;
@@ -170,10 +171,10 @@ textarea {
   width: fit-content;
   min-height: 32px;
   padding: 0 12px;
-  background: rgba(216, 255, 99, 0.1);
-  border: 1px solid rgba(216, 255, 99, 0.24);
+  background: rgba(139, 92, 246, 0.14);
+  border: 1px solid rgba(139, 92, 246, 0.34);
   border-radius: 999px;
-  color: var(--lime);
+  color: var(--aqua);
   font-size: 0.75rem;
   font-weight: 850;
   letter-spacing: 0.08em;
@@ -223,7 +224,7 @@ h3 {
 }
 
 .button.primary {
-  background: var(--lime);
+  background: linear-gradient(135deg, var(--violet), var(--cyan));
   color: var(--paper);
 }
 
@@ -306,7 +307,7 @@ h3 {
 .marquee {
   overflow: hidden;
   border-block: 1px solid var(--line);
-  background: var(--lime);
+  background: linear-gradient(90deg, var(--violet), var(--magenta), var(--cyan));
   color: var(--paper);
 }
 
@@ -432,7 +433,7 @@ h3 {
 }
 
 .service-row:hover {
-  color: var(--lime);
+  color: var(--aqua);
   transform: translateX(8px);
 }
 
@@ -527,7 +528,7 @@ h3 {
 }
 
 .package-list .featured-package {
-  background: var(--lime);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(34, 211, 238, 0.2)), #fff;
 }
 
 .package-list span {
@@ -577,7 +578,7 @@ h3 {
 .process-list span {
   display: inline-flex;
   margin-bottom: 72px;
-  color: var(--lime);
+  color: var(--magenta);
   font-weight: 900;
 }
 
@@ -607,7 +608,7 @@ h3 {
 }
 
 .work-grid a:hover {
-  background: var(--lime);
+  background: linear-gradient(135deg, var(--violet), var(--cyan));
 }
 
 .work-grid span {
