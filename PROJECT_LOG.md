@@ -23,8 +23,9 @@ This file is the working memory for the ATOCODE website. Update it after every m
 
 ## Site Features
 
-- Dark, tech-forward landing page
-- Animated canvas hero visual
+- Dark editorial agency/SaaS-style landing page inspired by Nerova, AextEra, Riteflow, C0deMine, and Sineva reference sites
+- Large hero headline, pill navigation, capability marquee, rounded studio panels, service rows, pricing cards, and selected work grid
+- Animated canvas hero visual restyled as a premium studio/dashboard object
 - Services: web development, UI design, hosting setup, maintenance
 - Packages:
   - Launch: from `$700`
@@ -71,4 +72,6 @@ This file is the working memory for the ATOCODE website. Update it after every m
 ### 2026-05-05
 
 - Added this `PROJECT_LOG.md` file to preserve project state and future edit history.
-
+- Rebuilt the landing page design around the provided Webflow references while keeping the existing ATOCODE content, services, packages, selected work, and contact details.
+- Replaced the prior neon card layout with a larger editorial dark hero, lime capability marquee, light package/work sections, row-based services, refined process cards, and responsive mobile fixes.
+- Verified desktop and mobile first-viewport screenshots locally with headless Chrome and removed temporary QA screenshots before commit.

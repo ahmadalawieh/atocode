@@ -17,33 +17,33 @@ function drawSystem(time = 0) {
   const width = canvas.clientWidth;
   const height = canvas.clientHeight;
   const tick = time / 1000;
-  const pulse = Math.sin(tick * 1.8) * 0.5 + 0.5;
+  const pulse = Math.sin(tick * 1.2) * 0.5 + 0.5;
 
   context.clearRect(0, 0, width, height);
-  context.fillStyle = "#070a0f";
+  context.fillStyle = "#101216";
   context.fillRect(0, 0, width, height);
 
   drawGrid(width, height, tick);
-  drawConnections(width, height, pulse, tick);
-  drawNodes(width, height, tick);
+  drawStudioRings(width, height, pulse, tick);
+  drawInterfaceCards(width, height, tick);
 
   requestAnimationFrame(drawSystem);
 }
 
 function drawGrid(width, height, tick) {
-  const offset = (tick * 18) % 42;
+  const offset = (tick * 10) % 58;
 
-  context.strokeStyle = "rgba(255,255,255,0.065)";
+  context.strokeStyle = "rgba(247,247,242,0.055)";
   context.lineWidth = 1;
 
-  for (let x = -42 + offset; x < width + 42; x += 42) {
+  for (let x = -58 + offset; x < width + 58; x += 58) {
     context.beginPath();
     context.moveTo(x, 0);
     context.lineTo(x, height);
     context.stroke();
   }
 
-  for (let y = -42 + offset; y < height + 42; y += 42) {
+  for (let y = -58 + offset; y < height + 58; y += 58) {
     context.beginPath();
     context.moveTo(0, y);
     context.lineTo(width, y);
@@ -51,63 +51,60 @@ function drawGrid(width, height, tick) {
   }
 }
 
-function drawConnections(width, height, pulse, tick) {
-  const points = getPoints(width, height, tick);
+function drawStudioRings(width, height, pulse, tick) {
+  const centerX = width * 0.5;
+  const centerY = height * 0.48;
+  const maxRadius = Math.min(width, height) * 0.36;
 
-  context.lineCap = "round";
-  context.lineWidth = 2;
-
-  points.forEach((point, index) => {
-    const next = points[(index + 1) % points.length];
-    const gradient = context.createLinearGradient(point.x, point.y, next.x, next.y);
-    gradient.addColorStop(0, `rgba(36, 211, 238, ${0.18 + pulse * 0.18})`);
-    gradient.addColorStop(1, `rgba(85, 242, 178, ${0.1 + pulse * 0.16})`);
-    context.strokeStyle = gradient;
+  for (let index = 0; index < 5; index += 1) {
+    const radius = maxRadius - index * 38 + Math.sin(tick + index) * 5;
+    context.strokeStyle = index === 0 ? "rgba(216,255,99,0.42)" : "rgba(247,247,242,0.12)";
+    context.lineWidth = index === 0 ? 2.5 : 1;
     context.beginPath();
-    context.moveTo(point.x, point.y);
-    context.lineTo(next.x, next.y);
+    context.ellipse(centerX, centerY, radius * 1.22, radius * 0.72, -0.38 + tick * 0.02, 0, Math.PI * 2);
     context.stroke();
-  });
+  }
+
+  const glow = context.createRadialGradient(centerX, centerY, 20, centerX, centerY, maxRadius * 1.6);
+  glow.addColorStop(0, `rgba(216,255,99,${0.16 + pulse * 0.06})`);
+  glow.addColorStop(0.5, "rgba(155,231,255,0.08)");
+  glow.addColorStop(1, "rgba(8,9,11,0)");
+  context.fillStyle = glow;
+  context.fillRect(0, 0, width, height);
 }
 
-function drawNodes(width, height, tick) {
-  const points = getPoints(width, height, tick);
-  const labels = ["UI", "DEV", "HOST", "CARE", "SEO"];
-
-  points.forEach((point, index) => {
-    const size = index === 1 ? 118 : 92;
-    const x = point.x - size / 2;
-    const y = point.y - 34;
-
-    context.fillStyle = "rgba(12, 18, 29, 0.86)";
-    context.strokeStyle = index === 1 ? "rgba(36, 211, 238, 0.72)" : "rgba(255,255,255,0.18)";
-    context.lineWidth = 1;
-    roundRect(context, x, y, size, 68, 8);
-    context.fill();
-    context.stroke();
-
-    context.fillStyle = index === 1 ? "#24d3ee" : "#55f2b2";
-    context.font = "800 13px system-ui, sans-serif";
-    context.fillText(labels[index], x + 16, y + 27);
-
-    context.fillStyle = "rgba(245,248,255,0.18)";
-    roundRect(context, x + 16, y + 40, size - 32, 5, 3);
-    context.fill();
-
-    context.fillStyle = "rgba(245,248,255,0.1)";
-    roundRect(context, x + 16, y + 51, size - 54, 5, 3);
-    context.fill();
-  });
-}
-
-function getPoints(width, height, tick) {
-  return [
-    { x: width * 0.24 + Math.sin(tick) * 8, y: height * 0.26 },
-    { x: width * 0.58, y: height * 0.32 + Math.cos(tick * 0.8) * 10 },
-    { x: width * 0.76 + Math.sin(tick * 0.7) * 8, y: height * 0.56 },
-    { x: width * 0.42, y: height * 0.72 + Math.cos(tick * 0.9) * 8 },
-    { x: width * 0.2, y: height * 0.55 + Math.sin(tick * 0.6) * 9 },
+function drawInterfaceCards(width, height, tick) {
+  const cards = [
+    { x: width * 0.19, y: height * 0.26, w: width * 0.38, h: 92, label: "Strategy", accent: "#d8ff63" },
+    { x: width * 0.37, y: height * 0.43, w: width * 0.32, h: 104, label: "Build", accent: "#9be7ff" },
+    { x: width * 0.18, y: height * 0.63, w: width * 0.34, h: 88, label: "Care", accent: "#ff8068" },
   ];
+
+  cards.forEach((card, index) => {
+    const lift = Math.sin(tick * 1.1 + index) * 6;
+    context.fillStyle = "rgba(247,247,242,0.94)";
+    context.strokeStyle = "rgba(247,247,242,0.35)";
+    context.lineWidth = 1;
+    roundRect(context, card.x, card.y + lift, card.w, card.h, 20);
+    context.fill();
+    context.stroke();
+
+    context.fillStyle = card.accent;
+    roundRect(context, card.x + 18, card.y + lift + 18, 52, 30, 15);
+    context.fill();
+
+    context.fillStyle = "#08090b";
+    context.font = "900 16px system-ui, sans-serif";
+    context.fillText(card.label, card.x + 84, card.y + lift + 39);
+
+    context.fillStyle = "rgba(8,9,11,0.18)";
+    roundRect(context, card.x + 84, card.y + lift + 58, card.w - 120, 7, 4);
+    context.fill();
+
+    context.fillStyle = "rgba(8,9,11,0.1)";
+    roundRect(context, card.x + 84, card.y + lift + 74, card.w - 170, 7, 4);
+    context.fill();
+  });
 }
 
 function roundRect(ctx, x, y, width, height, radius) {
