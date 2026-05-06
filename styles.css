@@ -180,10 +180,8 @@ p {
   height: 42px;
   place-items: center;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--violet), var(--cyan));
-  border-radius: 50%;
-  color: #05060b;
-  font-weight: 950;
+  border-radius: 12px;
+  box-shadow: 0 0 22px rgba(139, 92, 246, 0.22);
 }
 
 .brand-mark::after {
@@ -193,6 +191,16 @@ p {
   background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.55), transparent 70%);
   transform: translateX(-65%);
   animation: mark-shine 5.5s ease-in-out infinite;
+}
+
+.brand-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.brand-word {
+  color: var(--ink);
 }
 
 .nav {
