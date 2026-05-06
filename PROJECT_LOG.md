@@ -23,9 +23,10 @@ This file is the working memory for the ATOCODE website. Update it after every m
 
 ## Site Features
 
-- Dark editorial agency/SaaS-style landing page inspired by Nerova, AextEra, Riteflow, C0deMine, and Sineva reference sites
-- Large hero headline, pill navigation, capability marquee, rounded studio panels, service rows, pricing cards, and selected work grid
-- Animated canvas hero visual restyled as a premium studio/dashboard object
+- Neon Editorial landing page direction chosen from generated visual concepts
+- Large hero headline, pill navigation, live-status dashboard hero, capability rail, service rows, pricing cards, process cards, selected work grid, and contact form
+- Motion layer includes animated background beams, dashboard scan/glow, sparkline drawing, status pulse, card hover states, scroll reveals, and desktop dashboard tilt
+- Mobile-first header toggle with menu links and CTA inside the dropdown
 - Services: web development, UI design, hosting setup, maintenance
 - Packages:
   - Launch: from `$700`
@@ -77,3 +78,12 @@ This file is the working memory for the ATOCODE website. Update it after every m
 - Verified desktop and mobile first-viewport screenshots locally with headless Chrome and removed temporary QA screenshots before commit.
 - Updated the accent system from lime to a more tech-forward violet, cyan, and magenta palette across CSS, canvas animation, favicon, and Open Graph image.
 - Aligned the desktop header with the same responsive page gutters as the hero, increased hero text line height, added live canvas data streams/orbiting motion, animated studio cards, and replaced the messy mobile header with a toggle dropdown menu that includes nav links plus the CTA.
+
+### 2026-05-06
+
+- Implemented the selected `05 Neon Editorial` concept as the new homepage direction.
+- Replaced the abstract hero canvas/studio cards with a live-status dashboard containing uptime, response time, active sites, deployments, and service monitor rows.
+- Reworked the page into dark premium full-width bands with violet, cyan, blue, magenta, and green status accents while preserving existing services, packages, selected work, and contact details.
+- Added interaction polish: animated header mark shine, hero beams, dashboard scan, sparkline drawing, status pulse, scroll reveal transitions, desktop dashboard tilt, and refined hover states.
+- Focused responsive behavior on the mobile header dropdown, stacked hero, flexible dashboard cards, single-column service/package/process/work grids, and non-overflowing contact links/form fields.
+- Verified JavaScript syntax and desktop/mobile first-viewport screenshots with headless Chrome; removed temporary QA screenshots before commit.
