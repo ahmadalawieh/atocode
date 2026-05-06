@@ -88,3 +88,4 @@ This file is the working memory for the ATOCODE website. Update it after every m
 - Focused responsive behavior on the mobile header dropdown, stacked hero, flexible dashboard cards, single-column service/package/process/work grids, and non-overflowing contact links/form fields.
 - Verified JavaScript syntax and desktop/mobile first-viewport screenshots with headless Chrome; removed temporary QA screenshots before commit.
 - Fixed the intro `Positioning` kicker so the grid no longer stretches it into a tall vertical pill.
+- Moved the intro `Positioning` kicker above the intro title so it matches the section-heading pattern used elsewhere on the site.

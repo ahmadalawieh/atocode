@@ -763,22 +763,20 @@ p {
 }
 
 .intro-grid {
-  display: grid;
-  grid-template-columns: minmax(150px, 0.25fr) minmax(0, 1fr);
-  align-items: start;
-  gap: 58px;
-}
-
-.section-kicker {
-  align-self: start;
-  justify-self: start;
+  display: block;
 }
 
 .intro-copy {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.48fr);
-  align-items: end;
+  align-items: start;
   gap: 54px;
+}
+
+.intro-heading {
+  display: grid;
+  gap: 14px;
+  justify-items: start;
 }
 
 .intro-copy p,
