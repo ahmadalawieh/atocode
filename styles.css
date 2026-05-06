@@ -765,7 +765,13 @@ p {
 .intro-grid {
   display: grid;
   grid-template-columns: minmax(150px, 0.25fr) minmax(0, 1fr);
+  align-items: start;
   gap: 58px;
+}
+
+.section-kicker {
+  align-self: start;
+  justify-self: start;
 }
 
 .intro-copy {

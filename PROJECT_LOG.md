@@ -87,3 +87,4 @@ This file is the working memory for the ATOCODE website. Update it after every m
 - Added interaction polish: animated header mark shine, hero beams, dashboard scan, sparkline drawing, status pulse, scroll reveal transitions, desktop dashboard tilt, and refined hover states.
 - Focused responsive behavior on the mobile header dropdown, stacked hero, flexible dashboard cards, single-column service/package/process/work grids, and non-overflowing contact links/form fields.
 - Verified JavaScript syntax and desktop/mobile first-viewport screenshots with headless Chrome; removed temporary QA screenshots before commit.
+- Fixed the intro `Positioning` kicker so the grid no longer stretches it into a tall vertical pill.
