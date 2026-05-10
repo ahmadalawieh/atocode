@@ -4,387 +4,374 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ATOCODE | Web Development, UI Design, Hosting & Maintenance</title>
-    <meta
-      name="description"
-      content="ATOCODE by Ahmad Alawieh builds modern websites, polished UI design, reliable hosting setups, and ongoing maintenance for clients worldwide."
-    >
+    <meta name="description" content="ATOCODE by Ahmad Alawieh builds modern websites, polished UI design, reliable hosting setups, and ongoing maintenance for clients worldwide.">
     <link rel="canonical" href="https://www.atocode.online/">
-    <meta name="theme-color" content="#06070d">
+    <meta name="theme-color" content="#0a0a0f">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.atocode.online/">
-    <meta property="og:title" content="ATOCODE | Web Development, UI Design, Hosting & Maintenance">
-    <meta
-      property="og:description"
-      content="Modern websites, UI design, hosting setup, and ongoing care by Ahmad Alawieh for clients worldwide."
-    >
+    <meta property="og:title" content="ATOCODE | Web Development Studio">
+    <meta property="og:description" content="Modern websites, UI design, hosting setup, and ongoing care by Ahmad Alawieh for clients worldwide.">
     <meta property="og:image" content="https://www.atocode.online/og-image.svg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ATOCODE | Web Development Studio">
-    <meta
-      name="twitter:description"
-      content="Web development, UI design, hosting setup, and maintenance by Ahmad Alawieh."
-    >
+    <meta name="twitter:description" content="Web development, UI design, hosting setup, and maintenance by Ahmad Alawieh.">
     <meta name="twitter:image" content="https://www.atocode.online/og-image.svg">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="ATOCODE home">
-        <span class="brand-mark" aria-hidden="true">
-          <img src="brand/atocode-mark.svg" alt="" width="42" height="42">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4L4 8V16L12 20L20 16V8L12 4Z" stroke="white" stroke-width="2" fill="none"/>
+            <path d="M12 4V20M4 8L20 16M20 8L4 16" stroke="white" stroke-width="1.5"/>
+          </svg>
         </span>
-        <span class="brand-word">ATOCODE</span>
+        <span>ATOCODE</span>
       </a>
-      <button class="menu-toggle" type="button" aria-controls="primaryNav" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span class="sr-only">Menu</span>
-      </button>
-      <nav class="nav" id="primaryNav" aria-label="Main navigation">
+      <nav class="nav" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#packages">Packages</a>
         <a href="#work">Work</a>
         <a href="#contact">Contact</a>
-        <a class="mobile-nav-cta" href="#contact">Start a Project</a>
       </nav>
+      <button class="menu-toggle" type="button" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <a class="header-cta" href="#contact">Start a Project</a>
     </header>
 
     <main id="top">
-      <section class="hero" aria-label="ATOCODE overview">
-        <div class="hero-background" aria-hidden="true">
-          <span class="beam beam-one"></span>
-          <span class="beam beam-two"></span>
-          <span class="beam beam-three"></span>
-        </div>
-
-        <div class="hero-copy is-visible" data-reveal>
-          <p class="founder-tag">Ahmad Alawieh</p>
-          <h1>Digital systems that look sharp and <span>stay online.</span></h1>
+      <section class="hero">
+        <div class="hero-content" data-reveal>
+          <span class="founder-tag">Ahmad Alawieh</span>
+          <h1>Building digital products that <span>perform beautifully</span>.</h1>
           <p class="hero-text">
-            ATOCODE builds fast, modern websites, interfaces, and infrastructure
-            that perform everywhere.
+            I create responsive websites, polished interfaces, and reliable infrastructure that help businesses grow and stay online.
           </p>
-          <div class="hero-actions" aria-label="Primary actions">
+          <div class="hero-actions">
             <a class="button primary" href="#contact">Start a Project</a>
-            <a class="button secondary" href="#work">
-              <span>Selected Work</span>
-              <span aria-hidden="true">-&gt;</span>
-            </a>
+            <a class="button secondary" href="#work">View Portfolio</a>
           </div>
-          <div class="trust-row" aria-label="ATOCODE availability and trust">
-            <div class="trust-item">
-              <span class="trust-icon" aria-hidden="true"></span>
-              <span>Worldwide</span>
+          <div class="hero-stats">
+            <div class="hero-stats-item">
+              <strong>30+</strong>
+              <span>Projects Launched</span>
             </div>
-            <div class="client-stack" aria-label="Trusted by clients around the world">
-              <span>BA</span>
-              <span>KF</span>
-              <span>U5</span>
-              <span>VR</span>
-              <strong>+28</strong>
+            <div class="hero-stats-item">
+              <strong>99.9%</strong>
+              <span>Uptime Maintained</span>
             </div>
-            <p>Trusted by clients around the world.</p>
-          </div>
-        </div>
-
-        <div class="dashboard-shell is-visible" data-reveal data-tilt aria-label="Live ATOCODE operations dashboard">
-          <div class="dashboard-frame">
-            <div class="dashboard-topline">
-              <span>Live Status</span>
-              <strong><i aria-hidden="true"></i> All Systems Operational</strong>
-            </div>
-
-            <div class="status-grid">
-              <article class="status-card">
-                <span>Uptime</span>
-                <strong>99.99%</strong>
-                <svg viewBox="0 0 120 38" aria-hidden="true">
-                  <path d="M3 29 C20 26, 25 13, 39 18 S58 32, 72 19 S93 9, 117 14"></path>
-                </svg>
-              </article>
-              <article class="status-card">
-                <span>Response Time</span>
-                <strong>120ms</strong>
-                <svg viewBox="0 0 120 38" aria-hidden="true">
-                  <path d="M3 30 C17 28, 25 24, 35 26 S54 35, 67 21 S91 14, 117 8"></path>
-                </svg>
-              </article>
-              <article class="status-card">
-                <span>Active Sites</span>
-                <strong>24</strong>
-                <svg viewBox="0 0 120 38" aria-hidden="true">
-                  <path d="M3 31 C20 29, 30 22, 42 22 S60 17, 72 9 S92 27, 117 10"></path>
-                </svg>
-              </article>
-              <article class="status-card">
-                <span>Deployments</span>
-                <strong>8</strong>
-                <svg viewBox="0 0 120 38" aria-hidden="true">
-                  <path d="M3 31 L19 28 L33 18 L50 22 L63 14 L79 16 L96 9 L117 6"></path>
-                </svg>
-              </article>
-            </div>
-
-            <div class="service-monitor" aria-label="ATOCODE services">
-              <a href="#services">
-                <span class="monitor-icon code-icon" aria-hidden="true"></span>
-                <strong>Web Development</strong>
-                <em>Performance websites</em>
-              </a>
-              <a href="#services">
-                <span class="monitor-icon design-icon" aria-hidden="true"></span>
-                <strong>UI Design</strong>
-                <em>Intuitive interfaces</em>
-              </a>
-              <a href="#services">
-                <span class="monitor-icon host-icon" aria-hidden="true"></span>
-                <strong>Hosting</strong>
-                <em>Fast and secure</em>
-              </a>
-              <a href="#services">
-                <span class="monitor-icon care-icon" aria-hidden="true"></span>
-                <strong>Maintenance</strong>
-                <em>Ongoing care</em>
-              </a>
+            <div class="hero-stats-item">
+              <strong>Global</strong>
+              <span>Client Base</span>
             </div>
           </div>
         </div>
-      </section>
-
-      <section class="capability-rail" aria-label="ATOCODE capabilities">
-        <div>
-          <span>Web Development</span>
-          <span>UI Design</span>
-          <span>Hosting Setup</span>
-          <span>Maintenance</span>
-          <span>Performance</span>
-          <span>SEO Basics</span>
-          <span>Web Development</span>
-          <span>UI Design</span>
-          <span>Hosting Setup</span>
-          <span>Maintenance</span>
-          <span>Performance</span>
-          <span>SEO Basics</span>
-        </div>
-      </section>
-
-      <section class="section intro-section">
-        <div class="section-inner intro-grid">
-          <div class="intro-copy" data-reveal>
-            <div class="intro-heading">
-              <div class="section-kicker">Positioning</div>
-              <h2>A lean digital studio for websites that need more than a template.</h2>
+        
+        <div class="hero-visual" data-reveal>
+          <div class="code-window">
+            <div class="code-header">
+              <span class="code-dot red"></span>
+              <span class="code-dot yellow"></span>
+              <span class="code-dot green"></span>
+              <span class="code-title">index.js</span>
             </div>
-            <p>
-              ATOCODE is led by Ahmad Alawieh for clients who want one reliable
-              partner for the full website lifecycle: strategy, interface design,
-              development, hosting, launch support, and ongoing care after the site
-              is live.
-            </p>
+            <div class="code-body">
+              <span class="code-line"><span class="code-comment">// Initialize your project</span></span>
+              <span class="code-line"><span class="code-keyword">const</span> project = {</span>
+              <span class="code-line">&nbsp;&nbsp;name: <span class="code-string">"ATOCODE"</span>,</span>
+              <span class="code-line">&nbsp;&nbsp;services: [<span class="code-string">"Development"</span>, <span class="code-string">"Design"</span>],</span>
+              <span class="code-line">&nbsp;&nbsp;commitment: <span class="code-keyword">true</span></span>
+              <span class="code-line">};</span>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section class="section proof-section" aria-label="ATOCODE highlights">
-        <div class="section-inner proof-grid">
-          <article data-reveal>
-            <span>Selected Builds</span>
-            <strong>8</strong>
-            <p>Public projects across startups, services, travel, education, AI, and creative work.</p>
-          </article>
-          <article data-reveal>
-            <span>Coverage</span>
-            <strong>Global</strong>
-            <p>Remote-first collaboration for clients and teams worldwide.</p>
-          </article>
-          <article data-reveal>
-            <span>Lifecycle</span>
-            <strong>1</strong>
-            <p>One partner from design and development to hosting, monitoring, and care.</p>
-          </article>
+          <div class="floating-card card-1">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="card-label">Stack</span>
+            <span class="card-value">React, Node, Vercel</span>
+          </div>
+          <div class="floating-card card-2">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <span class="card-label">Response</span>
+            <span class="card-value">&lt; 24 hours</span>
+          </div>
         </div>
       </section>
 
       <section class="section services-section" id="services">
-        <div class="section-inner">
-          <div class="section-heading" data-reveal>
-            <p class="eyebrow">Services</p>
-            <h2>One partner for the full website lifecycle.</h2>
-          </div>
-          <div class="service-list">
-            <article class="service-row" data-reveal>
-              <span class="service-number">01</span>
-              <div>
-                <h3>Web Development</h3>
-                <p>Responsive websites, landing pages, business sites, and custom web apps built with clean, scalable code.</p>
-              </div>
-              <ul>
-                <li>Responsive builds</li>
-                <li>Landing pages</li>
-                <li>Custom websites</li>
-              </ul>
-            </article>
-            <article class="service-row" data-reveal>
-              <span class="service-number">02</span>
-              <div>
-                <h3>UI Design</h3>
-                <p>Interfaces, page systems, design refreshes, and conversion-focused layouts that feel polished and easy to use.</p>
-              </div>
-              <ul>
-                <li>Visual systems</li>
-                <li>UX flows</li>
-                <li>Design refreshes</li>
-              </ul>
-            </article>
-            <article class="service-row" data-reveal>
-              <span class="service-number">03</span>
-              <div>
-                <h3>Hosting Setup</h3>
-                <p>Domain, SSL, deployment, email routing, CDN, analytics, and performance basics handled with care.</p>
-              </div>
-              <ul>
-                <li>Domains</li>
-                <li>SSL</li>
-                <li>Deployment</li>
-              </ul>
-            </article>
-            <article class="service-row" data-reveal>
-              <span class="service-number">04</span>
-              <div>
-                <h3>Maintenance</h3>
-                <p>Monthly updates, backups, monitoring, security checks, content edits, and technical support after launch.</p>
-              </div>
-              <ul>
-                <li>Updates</li>
-                <li>Monitoring</li>
-                <li>Support</li>
-              </ul>
-            </article>
-          </div>
+        <div class="section-header" data-reveal>
+          <span class="eyebrow">Services</span>
+          <h2>What I do</h2>
+          <p>From initial concept to ongoing maintenance, I handle every aspect of your web presence.</p>
         </div>
-      </section>
-
-      <section class="section packages-section" id="packages">
-        <div class="section-inner">
-          <div class="section-heading split" data-reveal>
-            <div>
-              <p class="eyebrow">Packages</p>
-              <h2>Clear offers for launching, caring, and growing.</h2>
+        <div class="services-grid">
+          <article class="service-card" data-reveal>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+              </svg>
             </div>
-            <p>
-              Pick a starting point, then we tailor scope around your content,
-              goals, integrations, timeline, and long-term support needs.
-            </p>
-          </div>
-          <div class="package-list">
-            <article data-reveal>
-              <span>Launch</span>
-              <h3>From $700</h3>
-              <p>Design and build a modern website from scratch for a clear launch.</p>
-              <a href="#contact">Start Launch</a>
-            </article>
-            <article class="featured-package" data-reveal>
-              <span>Care</span>
-              <h3>From $120/mo</h3>
-              <p>Host, maintain, update, and protect an existing website.</p>
-              <a href="#contact">Start Care</a>
-            </article>
-            <article data-reveal>
-              <span>Growth</span>
-              <h3>Custom quote</h3>
-              <p>Improve pages, UI, speed, SEO basics, and conversion flow.</p>
-              <a href="#contact">Plan Growth</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section process-section" id="process">
-        <div class="section-inner">
-          <div class="section-heading" data-reveal>
-            <p class="eyebrow">Process</p>
-            <h2>A calm, practical path from idea to launch.</h2>
-          </div>
-          <ol class="process-list">
-            <li data-reveal>
-              <span>01</span>
-              <h3>Discover</h3>
-              <p>Clarify goals, audience, services, content, and what the website needs to do.</p>
-            </li>
-            <li data-reveal>
-              <span>02</span>
-              <h3>Design</h3>
-              <p>Create the visual direction, page structure, and interface system before building.</p>
-            </li>
-            <li data-reveal>
-              <span>03</span>
-              <h3>Build</h3>
-              <p>Develop the site, optimize for speed, connect forms, and prepare hosting.</p>
-            </li>
-            <li data-reveal>
-              <span>04</span>
-              <h3>Care</h3>
-              <p>Launch, monitor, maintain, and improve the site as the business grows.</p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="section work-section" id="work">
-        <div class="section-inner">
-          <div class="section-heading split" data-reveal>
-            <div>
-              <p class="eyebrow">Selected Work</p>
-              <h2>Websites across startups, services, travel, education, and tech.</h2>
+            <h3>Web Development</h3>
+            <p>Custom websites and web applications built with clean, scalable code using modern frameworks.</p>
+            <div class="service-tags">
+              <span>React/Next.js</span>
+              <span>Static Sites</span>
+              <span>E-commerce</span>
             </div>
-            <p>
-              A compact selection of public projects showing range across business
-              websites, brand systems, product presence, and service platforms.
-            </p>
+          </article>
+          
+          <article class="service-card" data-reveal>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+            </div>
+            <h3>UI Design</h3>
+            <p>User-centered interfaces that look great and function flawlessly across all devices.</p>
+            <div class="service-tags">
+              <span>Wireframes</span>
+              <span>Prototypes</span>
+              <span>Design Systems</span>
+            </div>
+          </article>
+          
+          <article class="service-card" data-reveal>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              </svg>
+            </div>
+            <h3>Hosting Setup</h3>
+            <p>Reliable hosting with SSL, CDN, and performance optimization to keep your site fast.</p>
+            <div class="service-tags">
+              <span>Vercel</span>
+              <span>AWS</span>
+              <span>Domain & SSL</span>
+            </div>
+          </article>
+          
+          <article class="service-card" data-reveal>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3>Maintenance</h3>
+            <p>Ongoing updates, security patches, backups, and technical support after launch.</p>
+            <div class="service-tags">
+              <span>Updates</span>
+              <span>Monitoring</span>
+              <span>Backups</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="packages-section" id="packages">
+        <div class="packages-inner">
+          <div class="section-header" data-reveal>
+            <span class="eyebrow">Packages</span>
+            <h2>Simple, transparent pricing</h2>
+            <p>Choose a package that fits your needs. All packages can be customized.</p>
+          </div>
+          <div class="packages-grid">
+            <article class="package-card" data-reveal>
+              <span class="package-tag">Launch</span>
+              <h3>$700+</h3>
+              <p class="package-price-note">Starting price</p>
+              <p>Design and build a modern website from scratch. Perfect for new businesses.</p>
+              <ul class="package-features">
+                <li>Custom design</li>
+                <li>Up to 5 pages</li>
+                <li>Mobile responsive</li>
+                <li>Contact form setup</li>
+                <li>Basic SEO</li>
+                <li>1 month support</li>
+              </ul>
+              <a class="package-cta" href="#contact">Start Launch</a>
+            </article>
+            
+            <article class="package-card featured" data-reveal>
+              <span class="package-tag">Care</span>
+              <h3>$120/mo</h3>
+              <p class="package-price-note">Starting price</p>
+              <p>Keep your existing website running smoothly with monthly maintenance.</p>
+              <ul class="package-features">
+                <li>Monthly updates</li>
+                <li>Security monitoring</li>
+                <li>Daily backups</li>
+                <li>Content edits</li>
+                <li>Performance tuning</li>
+                <li>Priority support</li>
+              </ul>
+              <a class="package-cta" href="#contact">Start Care</a>
+            </article>
+            
+            <article class="package-card" data-reveal>
+              <span class="package-tag">Growth</span>
+              <h3>Custom</h3>
+              <p class="package-price-note">Tailored to your goals</p>
+              <p>Scale your site with new features, redesigns, or performance improvements.</p>
+              <ul class="package-features">
+                <li>Feature development</li>
+                <li>UI/UX improvements</li>
+                <li>Speed optimization</li>
+                <li>SEO enhancements</li>
+                <li>Custom integrations</li>
+                <li>Dedicated support</li>
+              </ul>
+              <a class="package-cta" href="#contact">Plan Growth</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="work-section" id="work">
+        <div class="work-inner">
+          <div class="section-header" data-reveal>
+            <span class="eyebrow">Selected Work</span>
+            <h2>Projects I've built</h2>
+            <p>A selection of websites and applications created for clients around the world.</p>
           </div>
           <div class="work-grid">
-            <a href="https://b1-ventures.com/" target="_blank" rel="noopener" data-reveal>
-              <span>Finance</span>
-              <h3>B1 Ventures</h3>
-              <p>Investment and SME-focused business website.</p>
+            <a href="https://b1-ventures.com/" target="_blank" rel="noopener" class="work-card" data-reveal>
+              <div class="work-image">
+                <img src="https://placehold.co/600x400/1a1a24/f59e0b?text=B1+Ventures" alt="B1 Ventures website">
+                <div class="work-overlay"></div>
+              </div>
+              <div class="work-content">
+                <span class="work-category">Finance</span>
+                <h3>B1 Ventures</h3>
+                <p>Investment and SME-focused business website.</p>
+              </div>
+              <span class="work-link">
+                <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </span>
             </a>
-            <a href="https://kaizen-firm.com/" target="_blank" rel="noopener" data-reveal>
-              <span>Recruitment</span>
-              <h3>Kaizen Firm</h3>
-              <p>MENA recruitment and enterprise services platform.</p>
+            
+            <a href="https://kaizen-firm.com/" target="_blank" rel="noopener" class="work-card" data-reveal>
+              <div class="work-image">
+                <img src="https://placehold.co/600x400/1a1a24/14b8a6?text=Kaizen+Firm" alt="Kaizen Firm website">
+                <div class="work-overlay"></div>
+              </div>
+              <div class="work-content">
+                <span class="work-category">Recruitment</span>
+                <h3>Kaizen Firm</h3>
+                <p>MENA recruitment and enterprise services platform.</p>
+              </div>
+              <span class="work-link">
+                <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </span>
             </a>
-            <a href="https://www.umbrella500.com/" target="_blank" rel="noopener" data-reveal>
-              <span>Venture Studio</span>
-              <h3>Umbrella500</h3>
-              <p>Startup, entrepreneurship, and tech-driven growth website.</p>
+            
+            <a href="https://www.umbrella500.com/" target="_blank" rel="noopener" class="work-card" data-reveal>
+              <div class="work-image">
+                <img src="https://placehold.co/600x400/1a1a24/6366f1?text=Umbrella500" alt="Umbrella500 website">
+                <div class="work-overlay"></div>
+              </div>
+              <div class="work-content">
+                <span class="work-category">Venture Studio</span>
+                <h3>Umbrella500</h3>
+                <p>Startup and tech-driven growth website.</p>
+              </div>
+              <span class="work-link">
+                <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </span>
             </a>
-            <a href="https://stagaway.world/" target="_blank" rel="noopener" data-reveal>
-              <span>Travel</span>
-              <h3>Stagaway</h3>
-              <p>Destination and trip-planning website for group getaways.</p>
+            
+            <a href="https://stagaway.world/" target="_blank" rel="noopener" class="work-card" data-reveal>
+              <div class="work-image">
+                <img src="https://placehold.co/600x400/1a1a24/f97316?text=Stagaway" alt="Stagaway website">
+                <div class="work-overlay"></div>
+              </div>
+              <div class="work-content">
+                <span class="work-category">Travel</span>
+                <h3>Stagaway</h3>
+                <p>Destination and trip-planning website.</p>
+              </div>
+              <span class="work-link">
+                <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </span>
             </a>
-            <a href="https://dioramavr.com/" target="_blank" rel="noopener" data-reveal>
-              <span>VR</span>
-              <h3>DioramaVR</h3>
-              <p>Immersive technology and virtual reality web presence.</p>
+            
+            <a href="https://dioramavr.com/" target="_blank" rel="noopener" class="work-card" data-reveal>
+              <div class="work-image">
+                <img src="https://placehold.co/600x400/1a1a24/a855f7?text=DioramaVR" alt="DioramaVR website">
+                <div class="work-overlay"></div>
+              </div>
+              <div class="work-content">
+                <span class="work-category">VR</span>
+                <h3>DioramaVR</h3>
+                <p>Immersive technology and virtual reality.</p>
+              </div>
+              <span class="work-link">
+                <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </span>
             </a>
-            <a href="https://inbalance.ai/" target="_blank" rel="noopener" data-reveal>
-              <span>AI</span>
-              <h3>Inbalance AI</h3>
-              <p>AI-focused brand and web presence.</p>
+            
+            <a href="https://inbalance.ai/" target="_blank" rel="noopener" class="work-card" data-reveal>
+              <div class="work-image">
+                <img src="https://placehold.co/600x400/1a1a24/22c55e?text=Inbalance+AI" alt="Inbalance AI website">
+                <div class="work-overlay"></div>
+              </div>
+              <div class="work-content">
+                <span class="work-category">AI</span>
+                <h3>Inbalance AI</h3>
+                <p>AI-focused brand and web presence.</p>
+              </div>
+              <span class="work-link">
+                <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </span>
             </a>
-            <a href="https://fraise.studio/" target="_blank" rel="noopener" data-reveal>
-              <span>Creative Studio</span>
-              <h3>Fraise Studio</h3>
-              <p>Food production, styling, and photography studio website.</p>
+            
+            <a href="https://fraise.studio/" target="_blank" rel="noopener" class="work-card" data-reveal>
+              <div class="work-image">
+                <img src="https://placehold.co/600x400/1a1a24/ec4899?text=Fraise+Studio" alt="Fraise Studio website">
+                <div class="work-overlay"></div>
+              </div>
+              <div class="work-content">
+                <span class="work-category">Creative Studio</span>
+                <h3>Fraise Studio</h3>
+                <p>Food production and photography studio.</p>
+              </div>
+              <span class="work-link">
+                <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </span>
             </a>
-            <a href="https://danalandkids.com/" target="_blank" rel="noopener" data-reveal>
-              <span>Education</span>
-              <h3>DanaLand</h3>
-              <p>Arabic learning website for children and parents worldwide.</p>
+            
+            <a href="https://danalandkids.com/" target="_blank" rel="noopener" class="work-card" data-reveal>
+              <div class="work-image">
+                <img src="https://placehold.co/600x400/1a1a24/3b82f6?text=DanaLand" alt="DanaLand website">
+                <div class="work-overlay"></div>
+              </div>
+              <div class="work-content">
+                <span class="work-category">Education</span>
+                <h3>DanaLand</h3>
+                <p>Arabic learning website for children.</p>
+              </div>
+              <span class="work-link">
+                <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </span>
             </a>
           </div>
         </div>
@@ -392,84 +379,114 @@
 
       <section class="contact-section" id="contact">
         <div class="contact-inner">
-          <div class="contact-copy" data-reveal>
-            <p class="eyebrow">Start</p>
-            <h2>Tell ATOCODE what you want to build.</h2>
-            <p>
-              Share a few details and the form will prepare a project inquiry
-              email. We can connect it to Formspree or Resend next for direct
-              submissions.
-            </p>
-            <div class="contact-links" aria-label="Direct contact links">
-              <a href="mailto:ahmad.alawieh77@gmail.com">ahmad.alawieh77@gmail.com</a>
-              <a href="https://wa.me/96170332361" target="_blank" rel="noopener">WhatsApp: +961 70 332 361</a>
+          <div class="contact-info" data-reveal>
+            <span class="eyebrow">Let's Talk</span>
+            <h2>Ready to start your project?</h2>
+            <p>Tell me about what you need and I'll get back to you within 24 hours with a plan and quote.</p>
+            
+            <div class="contact-methods">
+              <a href="mailto:ahmad.alawieh77@gmail.com" class="contact-method">
+                <span class="contact-method-icon">
+                  <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </span>
+                <span class="contact-method-content">
+                  <span>Email</span>
+                  <strong>ahmad.alawieh77@gmail.com</strong>
+                </span>
+              </a>
+              
+              <a href="https://wa.me/96170332361" target="_blank" rel="noopener" class="contact-method">
+                <span class="contact-method-icon">
+                  <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </span>
+                <span class="contact-method-content">
+                  <span>WhatsApp</span>
+                  <strong>+961 70 332 361</strong>
+                </span>
+              </a>
             </div>
           </div>
-          <form class="contact-form" id="contactForm" data-reveal>
-            <div class="form-grid">
-              <label>
-                <span>Name</span>
-                <input name="name" type="text" autocomplete="name" required>
-              </label>
-              <label>
-                <span>Email</span>
-                <input name="email" type="email" autocomplete="email" required>
-              </label>
-            </div>
-            <label>
-              <span>Service</span>
-              <select name="service" required>
-                <option value="">Choose a service</option>
-                <option>Web development</option>
-                <option>UI design</option>
-                <option>Hosting setup</option>
-                <option>Maintenance</option>
-                <option>Full launch package</option>
-              </select>
-            </label>
-            <div class="form-grid">
-              <label>
-                <span>Budget</span>
-                <select name="budget">
-                  <option value="">Not sure yet</option>
-                  <option>Under $500</option>
-                  <option>$500 - $1,500</option>
-                  <option>$1,500 - $3,000</option>
-                  <option>$3,000+</option>
-                </select>
-              </label>
-              <label>
-                <span>Timeline</span>
-                <select name="timeline">
-                  <option value="">Flexible</option>
-                  <option>ASAP</option>
-                  <option>2 - 4 weeks</option>
-                  <option>1 - 2 months</option>
-                  <option>Just exploring</option>
-                </select>
-              </label>
-            </div>
-            <label>
-              <span>Project details</span>
-              <textarea name="message" rows="5" placeholder="Tell me about your business, goals, current website, or what you need help with." required></textarea>
-            </label>
-            <button class="button primary form-submit" type="submit">Prepare Inquiry</button>
-            <p class="form-note" id="formNote">Sends to Ahmad through your email app for now.</p>
-          </form>
+          
+          <div class="contact-form-wrapper" data-reveal>
+            <form class="contact-form" id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" autocomplete="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="service">Service</label>
+                  <select id="service" name="service" required>
+                    <option value="">Choose a service</option>
+                    <option>Web Development</option>
+                    <option>UI Design</option>
+                    <option>Hosting Setup</option>
+                    <option>Maintenance</option>
+                    <option>Full Package</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="budget">Budget</label>
+                  <select id="budget" name="budget">
+                    <option value="">Not sure yet</option>
+                    <option>Under $500</option>
+                    <option>$500 - $1,500</option>
+                    <option>$1,500 - $3,000</option>
+                    <option>$3,000+</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Project Details</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell me about your project, goals, and timeline..." required></textarea>
+              </div>
+              
+              <button type="submit" class="button primary form-submit">Send Message</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
       <div class="footer-inner">
-        <a class="brand" href="#top" aria-label="ATOCODE home">
-          <span class="brand-mark" aria-hidden="true">
-            <img src="brand/atocode-mark.svg" alt="" width="42" height="42">
+        <div class="footer-brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4L4 8V16L12 20L20 16V8L12 4Z" stroke="white" stroke-width="2" fill="none"/>
+              <path d="M12 4V20M4 8L20 16M20 8L4 16" stroke="white" stroke-width="1.5"/>
+            </svg>
           </span>
-          <span class="brand-word">ATOCODE</span>
-        </a>
-        <p>ATOCODE by Ahmad Alawieh. Web development, UI design, hosting, and maintenance worldwide.</p>
-        <a href="#top">Back to top</a>
+          <span>ATOCODE</span>
+        </div>
+        
+        <nav class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#packages">Packages</a>
+          <a href="#work">Work</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        
+        <div class="footer-social">
+          <a href="https://github.com/ahmadalawieh/atocode" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/ahmadalawieh" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>ATOCODE by Ahmad Alawieh. All rights reserved.</p>
+        </div>
       </div>
     </footer>
 
