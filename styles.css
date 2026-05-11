@@ -269,7 +269,7 @@ p {
 }
 
 .theme-toggle {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 40px;
@@ -295,9 +295,18 @@ p {
 }
 
 .header-actions {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 12px;
+}
+
+.header-actions .theme-toggle,
+.mobile-header-actions .theme-toggle {
+  display: flex;
+}
+
+.mobile-header-actions {
+  display: none;
 }
 
 .light-mode {
@@ -1343,10 +1352,7 @@ p {
     --page-x: 20px;
   }
   
-  .nav {
-    display: none;
-  }
-  
+  .nav,
   .header-actions {
     display: none;
   }
@@ -1357,8 +1363,13 @@ p {
   }
   
   .mobile-header-actions {
+    display: flex;
     align-items: center;
     gap: 8px;
+  }
+  
+  .mobile-header-actions .theme-toggle {
+    display: flex;
   }
   
   .site-header {
