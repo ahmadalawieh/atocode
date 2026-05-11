@@ -1293,7 +1293,12 @@ p {
   }
   
   .hero-visual {
+    order: -1;
     min-height: 400px;
+  }
+  
+  .hero-content {
+    order: 1;
   }
   
   .packages-grid,
@@ -1354,10 +1359,6 @@ p {
   .mobile-header-actions {
     align-items: center;
     gap: 8px;
-  }
-  
-  .menu-toggle {
-    display: flex;
   }
   
   .site-header {
