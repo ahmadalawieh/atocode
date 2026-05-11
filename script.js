@@ -1,5 +1,6 @@
 const siteHeader = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
+const mobileMenuToggle = document.querySelector(".mobile-header-actions .menu-toggle");
 const revealItems = document.querySelectorAll("[data-reveal]");
 
 if (siteHeader) {
@@ -15,9 +16,12 @@ if (siteHeader) {
   });
 }
 
-menuToggle?.addEventListener("click", () => {
+const toggleMobileMenu = () => {
   siteHeader?.classList.toggle("is-open");
-});
+};
+
+menuToggle?.addEventListener("click", toggleMobileMenu);
+mobileMenuToggle?.addEventListener("click", toggleMobileMenu);
 
 document.querySelectorAll(".mobile-nav a").forEach((link) => {
   link.addEventListener("click", () => {

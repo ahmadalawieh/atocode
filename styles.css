@@ -310,11 +310,6 @@ p {
   gap: 8px;
 }
 
-.mobile-header-actions .theme-toggle,
-.mobile-header-actions .menu-toggle {
-  display: none;
-}
-
 .light-mode {
   --bg: #fafafa;
   --bg-soft: #f4f4f5;
