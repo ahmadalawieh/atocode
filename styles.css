@@ -295,17 +295,23 @@ p {
 }
 
 .header-actions {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.header-actions .theme-toggle,
-.mobile-header-actions .theme-toggle {
+.header-actions .theme-toggle {
   display: flex;
 }
 
 .mobile-header-actions {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
+.mobile-header-actions .theme-toggle,
+.mobile-header-actions .menu-toggle {
   display: none;
 }
 
@@ -1357,8 +1363,7 @@ p {
     display: none;
   }
   
-  .menu-toggle,
-  .mobile-header-actions {
+  .menu-toggle {
     display: flex;
   }
   
@@ -1368,7 +1373,8 @@ p {
     gap: 8px;
   }
   
-  .mobile-header-actions .theme-toggle {
+  .mobile-header-actions .theme-toggle,
+  .mobile-header-actions .menu-toggle {
     display: flex;
   }
   
