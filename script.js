@@ -26,19 +26,25 @@ document.querySelectorAll(".mobile-nav a").forEach((link) => {
 });
 
 const themeToggle = document.querySelector(".theme-toggle");
+const mobileThemeToggle = document.querySelector(".mobile-header-actions .theme-toggle");
 
-if (themeToggle) {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") {
-    document.body.classList.add("light-mode");
-  }
+const applyTheme = (isLight) => {
+  document.body.classList.toggle("light-mode", isLight);
+  localStorage.setItem("theme", isLight ? "light" : "dark");
+};
 
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-    const isLight = document.body.classList.contains("light-mode");
-    localStorage.setItem("theme", isLight ? "light" : "dark");
-  });
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "light") {
+  applyTheme(true);
 }
+
+[themeToggle, mobileThemeToggle].forEach((toggle) => {
+  if (!toggle) return;
+  toggle.addEventListener("click", () => {
+    const isLight = !document.body.classList.contains("light-mode");
+    applyTheme(isLight);
+  });
+});
 
 const revealVisible = (item) => {
   item.classList.add("is-visible");

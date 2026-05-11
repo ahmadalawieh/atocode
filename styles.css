@@ -294,6 +294,12 @@ p {
   stroke-width: 2;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .light-mode {
   --bg: #fafafa;
   --bg-soft: #f4f4f5;
@@ -1288,19 +1294,42 @@ p {
   
   .hero-visual {
     min-height: 400px;
-    order: -1;
   }
   
-  .packages-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .packages-grid,
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
   
   .work-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .work-grid::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .work-grid::-webkit-scrollbar-track {
+    background: var(--panel);
+  }
+  
+  .work-grid::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+  }
+  
+  .work-card {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+  }
+  
+  .work-section {
+    padding-bottom: 40px;
   }
 }
 
@@ -1309,8 +1338,22 @@ p {
     --page-x: 20px;
   }
   
-  .nav, .header-cta {
+  .nav {
     display: none;
+  }
+  
+  .header-actions {
+    display: none;
+  }
+  
+  .menu-toggle,
+  .mobile-header-actions {
+    display: flex;
+  }
+  
+  .mobile-header-actions {
+    align-items: center;
+    gap: 8px;
   }
   
   .menu-toggle {
