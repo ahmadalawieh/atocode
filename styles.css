@@ -221,7 +221,6 @@ p {
 }
 
 .mobile-nav {
-  display: none;
   position: absolute;
   top: calc(100% + 10px);
   left: 50%;
@@ -304,10 +303,9 @@ p {
   display: flex;
 }
 
-.mobile-header-actions {
+.mobile-header-actions,
+.mobile-nav {
   display: none;
-  align-items: center;
-  gap: 8px;
 }
 
 .light-mode {
@@ -1360,6 +1358,10 @@ p {
   
   .menu-toggle {
     display: flex;
+  }
+  
+  .mobile-nav {
+    display: block;
   }
   
   .mobile-header-actions {
