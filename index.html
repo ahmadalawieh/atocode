@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="version" content="2.3.1">
+    <meta name="version" content="2.4.0">
     <title>ATOCODE | Web Development, UI Design, Hosting & Maintenance</title>
     <meta name="description" content="ATOCODE by Ahmad Alawieh builds modern websites, polished UI design, reliable hosting setups, and ongoing maintenance for clients worldwide.">
     <link rel="canonical" href="https://www.atocode.online/">
@@ -20,6 +20,7 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -268,6 +269,54 @@
         </div>
       </section>
 
+      <section class="stack-section" id="stack">
+        <div class="stack-inner">
+          <div class="section-header" data-reveal>
+            <span class="eyebrow">Tools &amp; Stack</span>
+            <h2>What I build with</h2>
+            <p>Modern, battle-tested tools that ship fast and scale reliably.</p>
+          </div>
+          <div class="stack-grid">
+            <div class="stack-category" data-reveal>
+              <h3>Frontend</h3>
+              <ul>
+                <li>React &amp; Next.js</li>
+                <li>TypeScript</li>
+                <li>Tailwind CSS</li>
+                <li>Framer Motion</li>
+              </ul>
+            </div>
+            <div class="stack-category" data-reveal>
+              <h3>Backend &amp; CMS</h3>
+              <ul>
+                <li>WordPress</li>
+                <li>WooCommerce</li>
+                <li>Node.js</li>
+                <li>PHP &amp; MySQL</li>
+              </ul>
+            </div>
+            <div class="stack-category" data-reveal>
+              <h3>Infrastructure</h3>
+              <ul>
+                <li>Vercel</li>
+                <li>AWS</li>
+                <li>Cloudflare</li>
+                <li>GitHub Actions</li>
+              </ul>
+            </div>
+            <div class="stack-category" data-reveal>
+              <h3>Design Tools</h3>
+              <ul>
+                <li>Figma</li>
+                <li>Adobe Suite</li>
+                <li>Webflow</li>
+                <li>GSAP</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="work-section" id="work">
         <div class="work-inner">
           <div class="section-header" data-reveal>
@@ -399,6 +448,63 @@
         </div>
       </section>
 
+      <section class="case-studies-section" id="case-studies">
+        <div class="case-studies-inner">
+          <div class="section-header" data-reveal>
+            <span class="eyebrow">Case Studies</span>
+            <h2>How I deliver impact</h2>
+            <p>A closer look at the strategy, process, and results behind recent projects.</p>
+          </div>
+          <div class="case-studies-grid">
+            <article class="case-study-card" data-reveal>
+              <div class="case-study-image">
+                <img src="images/b1-ventures.svg" loading="lazy" alt="B1 Ventures case study">
+              </div>
+              <div class="case-study-body">
+                <span class="case-study-tag">Finance &middot; Web Development</span>
+                <h3>B1 Ventures — Investment Platform</h3>
+                <p>Built a custom investor portal with per-user dashboards, document management, portfolio tracking, and payment history. Replaced spreadsheets with a secure, branded web app that scaled to 30+ investors.</p>
+                <ul class="case-study-meta">
+                  <li><strong>Role:</strong> Full-stack developer</li>
+                  <li><strong>Stack:</strong> WordPress, PHP, MySQL, JavaScript</li>
+                  <li><strong>Timeline:</strong> 6 weeks</li>
+                </ul>
+              </div>
+            </article>
+            <article class="case-study-card" data-reveal>
+              <div class="case-study-image">
+                <img src="images/kaizen-firm.svg" loading="lazy" alt="Kaizen Firm case study">
+              </div>
+              <div class="case-study-body">
+                <span class="case-study-tag">Recruitment &middot; Web Development</span>
+                <h3>Kaizen Firm — Recruitment Platform</h3>
+                <p>Designed and developed a multi-language recruitment website serving the MENA region. Integrated job listings, candidate portals, and enterprise service pages with SEO-optimised content structure.</p>
+                <ul class="case-study-meta">
+                  <li><strong>Role:</strong> Developer &amp; designer</li>
+                  <li><strong>Stack:</strong> WordPress, Polylang, Custom theme</li>
+                  <li><strong>Timeline:</strong> 4 weeks</li>
+                </ul>
+              </div>
+            </article>
+            <article class="case-study-card" data-reveal>
+              <div class="case-study-image">
+                <img src="images/umbrella500.svg" loading="lazy" alt="Umbrella500 case study">
+              </div>
+              <div class="case-study-body">
+                <span class="case-study-tag">Venture Studio &middot; UI Design</span>
+                <h3>Umbrella500 — Brand &amp; Web Presence</h3>
+                <p>Created a vibrant startup-focused website with bold visual identity, animated sections, and clear service communication. The site helped establish brand credibility for early-stage fundraising conversations.</p>
+                <ul class="case-study-meta">
+                  <li><strong>Role:</strong> UI designer &amp; developer</li>
+                  <li><strong>Stack:</strong> HTML, CSS, JavaScript, GSAP</li>
+                  <li><strong>Timeline:</strong> 3 weeks</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="testimonials-section" id="testimonials">
         <div class="testimonials-inner">
           <div class="section-header" data-reveal>
@@ -516,6 +622,7 @@
               </div>
               
               <button type="submit" class="button primary form-submit">Send Message</button>
+              <p id="formStatus" class="form-status"></p>
             </form>
           </div>
         </div>
@@ -543,6 +650,8 @@
           <a href="#packages">Packages</a>
           <a href="#work">Work</a>
           <a href="#contact">Contact</a>
+          <a href="blog.html">Blog</a>
+          <a href="privacy.html">Privacy</a>
         </nav>
         
         <div class="footer-social">

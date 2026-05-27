@@ -1,4 +1,4 @@
-/* ATOCODE Website — v2.3.1 */
+/* ATOCODE Website — v2.4.0 */
 
 const siteHeader = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
@@ -80,31 +80,44 @@ if ("IntersectionObserver" in window) {
 }
 
 const contactForm = document.querySelector("#contactForm");
+const formStatus = document.querySelector("#formStatus");
 
-contactForm?.addEventListener("submit", (event) => {
+contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const formData = new FormData(contactForm);
-  const name = formData.get("name")?.toString().trim();
-  const email = formData.get("email")?.toString().trim();
-  const service = formData.get("service")?.toString().trim();
-  const budget = formData.get("budget")?.toString().trim() || "Not sure yet";
-  const message = formData.get("message")?.toString().trim();
+  if (!formStatus) return;
 
-  const body = [
-    `Name: ${name}`,
-    `Email: ${email}`,
-    `Service: ${service}`,
-    `Budget: ${budget}`,
-    "",
-    "Project details:",
-    message,
-  ].join("\n");
+  const submitBtn = contactForm.querySelector(".form-submit");
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+  formStatus.textContent = "";
+  formStatus.className = "form-status";
 
-  const subject = `ATOCODE project inquiry from ${name}`;
-  const mailto = `mailto:ahmad.alawieh77@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  try {
+    const formData = new FormData(contactForm);
+    formData.append("_subject", "ATOCODE project inquiry from " + formData.get("name"));
 
-  window.location.href = mailto;
+    const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" },
+    });
+
+    if (response.ok) {
+      formStatus.textContent = "Message sent. I'll get back to you within 24 hours.";
+      formStatus.className = "form-status form-success";
+      contactForm.reset();
+    } else {
+      const data = await response.json();
+      throw new Error(data.error || "Something went wrong.");
+    }
+  } catch (error) {
+    formStatus.textContent = error.message || "Failed to send. Please email me directly.";
+    formStatus.className = "form-status form-error";
+  }
+
+  submitBtn.disabled = false;
+  submitBtn.textContent = "Send Message";
 });
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

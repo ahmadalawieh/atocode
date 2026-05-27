@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog — ATOCODE</title>
+    <meta name="description" content="Insights on web development, UI design, hosting, and maintenance by Ahmad Alawieh.">
+    <link rel="canonical" href="https://www.atocode.online/blog.html">
+    <meta property="og:title" content="ATOCODE Blog">
+    <meta property="og:description" content="Web development insights and guides by Ahmad Alawieh.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .blog-page { max-width: 780px; margin: 0 auto; padding: 120px 20px 80px; }
+      .blog-page h1 { font-size: 2.5rem; margin-bottom: 8px; }
+      .blog-page .blog-subtitle { color: var(--faint); margin-bottom: 48px; font-size: 1.05rem; }
+      .blog-grid { display: flex; flex-direction: column; gap: 40px; }
+      .blog-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 32px; transition: all 250ms ease; }
+      .blog-card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 16px 40px rgba(0,0,0,0.2); }
+      .blog-card-tag { display: inline-block; padding: 4px 12px; background: rgba(245,158,11,0.1); border-radius: 100px; color: var(--accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
+      .blog-card h2 { font-size: 1.5rem; margin-bottom: 12px; color: var(--ink); }
+      .blog-card p { color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
+      .blog-card-meta { display: flex; gap: 24px; color: var(--faint); font-size: 0.9rem; }
+      .blog-back { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 40px; color: var(--accent); font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <div class="blog-page">
+      <a class="blog-back" href="index.html">← Back to ATOCODE</a>
+      <h1>Blog</h1>
+      <p class="blog-subtitle">Thoughts on building for the web — from code to deployment and beyond.</p>
+
+      <div class="blog-grid">
+        <article class="blog-card">
+          <span class="blog-card-tag">Web Development</span>
+          <h2>Why static sites still win in 2026</h2>
+          <p>Between the noise of SSR, ISR, and edge functions, the humble static HTML page remains the fastest, most secure, and easiest to maintain option for most business websites. Here's when to choose it and how to get 100 Lighthouse scores every time.</p>
+          <div class="blog-card-meta">
+            <span>May 2026</span>
+            <span>4 min read</span>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <span class="blog-card-tag">UI Design</span>
+          <h2>Designing for conversion: less is always more</h2>
+          <p>Most websites fail not because of bad code, but because of cluttered design. I break down the principles of conversion-focused layout — visual hierarchy, whitespace, clear CTAs, and how to remove friction from every user journey.</p>
+          <div class="blog-card-meta">
+            <span>April 2026</span>
+            <span>5 min read</span>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <span class="blog-card-tag">Hosting &amp; Performance</span>
+          <h2>How I keep client sites at 99.9% uptime</h2>
+          <p>Behind every reliable website is a boring but essential stack: Vercel for deployments, Cloudflare for DNS and caching, automated uptime monitoring, and proactive maintenance. This is the exact setup I use for every client I work with.</p>
+          <div class="blog-card-meta">
+            <span>March 2026</span>
+            <span>3 min read</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

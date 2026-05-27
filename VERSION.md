@@ -7,11 +7,21 @@
 
 ---
 
-## Current Version: **2.3.1** (2026-05-10)
+## Current Version: **2.4.0** (2026-05-10)
 
 ---
 
 ## Version History
+
+### v2.4.0 (2026-05-10)
+
+- **Formspree integration:** Replaced mailto contact form with Formspree API submission with success/error feedback
+- **Privacy policy:** New `privacy.html` page with GDPR-friendly privacy policy
+- **Font preloading:** Added `<link rel="preload">` for Clash Display to improve LCP
+- **Tools & Stack section:** New section showcasing frontend, backend, infrastructure, and design tools
+- **Case studies:** New section with 3 detailed project case studies (B1 Ventures, Kaizen Firm, Umbrella500)
+- **Blog:** New `blog.html` page with 3 articles (static sites, design, hosting)
+- **Footer:** Added blog and privacy policy links
 
 ### v2.3.1 (2026-05-10)
 

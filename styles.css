@@ -1,4 +1,4 @@
-/* ATOCODE Website — v2.3.1 — https://github.com/ahmadalawieh/atocode */
+/* ATOCODE Website — v2.4.0 — https://github.com/ahmadalawieh/atocode */
 :root {
   color-scheme: dark;
   --bg: #0a0a0f;
@@ -875,6 +875,168 @@ p {
   transform: translateY(-2px);
 }
 
+.stack-section {
+  background: var(--bg);
+  padding: 100px var(--page-x);
+}
+
+.stack-inner {
+  max-width: var(--max-site);
+  margin: 0 auto;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stack-category {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  padding: 28px 24px;
+  transition: all 300ms ease;
+}
+
+.stack-category:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.stack-category h3 {
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stack-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stack-category li {
+  padding: 8px 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.stack-category li:last-child {
+  border-bottom: 0;
+}
+
+.case-studies-section {
+  background: var(--bg-soft);
+  padding: 100px var(--page-x);
+}
+
+.case-studies-inner {
+  max-width: var(--max-site);
+  margin: 0 auto;
+}
+
+.case-studies-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.case-study-card {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  transition: all 300ms ease;
+}
+
+.case-study-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+}
+
+.case-study-image {
+  background: var(--surface);
+  min-height: 100%;
+}
+
+.case-study-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-study-body {
+  padding: 28px 32px;
+}
+
+.case-study-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.case-study-body h3 {
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.case-study-body > p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.case-study-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.case-study-meta li {
+  color: var(--faint);
+  font-size: 0.85rem;
+}
+
+.case-study-meta strong {
+  color: var(--ink-soft);
+}
+
+.form-status {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.form-success {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--success);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.form-error {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
 .work-section {
   background: var(--bg);
   padding: 100px var(--page-x);
@@ -1345,6 +1507,19 @@ p {
   .work-section {
     padding-bottom: 40px;
   }
+
+  .stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .case-study-card {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study-image {
+    aspect-ratio: 16/9;
+    min-height: auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1427,6 +1602,15 @@ p {
   .footer-social {
     justify-content: center;
   }
+
+  .stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .case-study-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1444,5 +1628,9 @@ p {
   
   .floating-card {
     display: none;
+  }
+
+  .stack-grid {
+    grid-template-columns: 1fr;
   }
 }

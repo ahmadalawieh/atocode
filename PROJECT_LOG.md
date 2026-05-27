@@ -4,7 +4,7 @@ This file is the working memory for the ATOCODE website. Update it after every m
 
 ## Current Status
 
-- **Version:** 2.3.1 (see VERSION.md)
+- **Version:** 2.4.0 (see VERSION.md)
 - Live site: https://www.atocode.online
 - GitHub repo: https://github.com/ahmadalawieh/atocode
 - Vercel project: `atocode`
@@ -92,6 +92,17 @@ This file is the working memory for the ATOCODE website. Update it after every m
 - Add a dedicated blog/insights section
 
 ## Edit Log
+
+### 2026-05-10 — v2.4.0
+
+- Replaced mailto contact form with Formspree API submission (success/error feedback)
+- Created `privacy.html` privacy policy page
+- Created `blog.html` insights page with 3 articles
+- Added font preloading for Clash Display to improve LCP
+- Added Tools & Stack section (frontend, backend, infrastructure, design)
+- Added Case Studies section (B1 Ventures, Kaizen Firm, Umbrella500)
+- Updated footer with blog and privacy links
+- Responsive styles for all new sections at 1100px, 768px, and 480px breakpoints
 
 ### 2026-05-10 — v2.3.1
 
