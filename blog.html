@@ -1,142 +1,121 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog — ATOCODE</title>
-    <meta name="description" content="Insights on web development, UI design, hosting, and maintenance by Ahmad Alawieh.">
-    <link rel="canonical" href="https://www.atocode.online/blog.html">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.atocode.online/blog.html">
-    <meta property="og:title" content="ATOCODE Blog — Web Dev Insights">
-    <meta property="og:description" content="Thoughts on building for the web — from code to deployment and beyond.">
-    <meta property="og:image" content="https://www.atocode.online/og-image.svg">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-      .blog-page { max-width: 780px; margin: 0 auto; padding: 120px 20px 80px; color: var(--ink); }
-      .blog-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 30px; }
-      .blog-back { color: var(--accent); font-weight: 600; }
-      .blog-theme-toggle { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: transparent; border: 1px solid var(--line); border-radius: 10px; color: var(--muted); cursor: pointer; transition: all 200ms ease; }
-      .blog-theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
-      .blog-theme-toggle svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; }
-      .blog-page h1 { font-size: 2.5rem; margin-bottom: 8px; }
-      .blog-subtitle { color: var(--muted); margin-bottom: 48px; font-size: 1.05rem; line-height: 1.6; }
-      .blog-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
-      .blog-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; transition: all 250ms ease; display: grid; grid-template-columns: 200px 1fr; }
-      .blog-card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 16px 40px rgba(0,0,0,0.2); }
-      .blog-card-image { background: var(--surface); display: flex; align-items: center; justify-content: center; min-height: 130px; }
-      .blog-card-image span { font-size: 2.5rem; opacity: 0.15; color: var(--accent); font-weight: 900; }
-      .blog-card-body { padding: 24px; display: flex; flex-direction: column; justify-content: center; }
-      .blog-card-tag { display: inline-block; padding: 3px 10px; background: rgba(245,158,11,0.1); border-radius: 100px; color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; width: fit-content; }
-      .blog-card h2 { font-size: 1.2rem; margin-bottom: 8px; color: var(--ink); }
-      .blog-card p { color: var(--muted); line-height: 1.6; font-size: 0.95rem; margin-bottom: 12px; }
-      .blog-card-meta { display: flex; gap: 20px; color: var(--faint); font-size: 0.85rem; }
-      .blog-newsletter { background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(249,115,22,0.05)); border: 1px solid rgba(245,158,11,0.2); border-radius: 12px; padding: 32px; margin-top: 48px; }
-      .blog-newsletter h3 { color: var(--ink); margin-bottom: 10px; }
-      .blog-newsletter p { color: var(--muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
-      .blog-newsletter-cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--accent); color: #000; font-weight: 600; border-radius: 8px; transition: all 200ms ease; }
-      .blog-newsletter-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(245,158,11,0.25); }
-      @media (max-width: 600px) { .blog-card { grid-template-columns: 1fr; } .blog-card-image { aspect-ratio: 2/1; min-height: auto; } }
-      @media (max-width: 500px) { .blog-page h1 { font-size: 2rem; } }
-    </style>
-  </head>
-  <body>
-    <div class="blog-page">
-      <div class="blog-top">
-        <a class="blog-back" href="index.html">← Back to ATOCODE</a>
-        <button class="blog-theme-toggle" type="button" aria-label="Toggle theme" id="blogThemeToggle">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </button>
-      </div>
-      <h1>Blog</h1>
-      <p class="blog-subtitle">Thoughts on building for the web — from code to deployment and beyond.</p>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blog — ATOCODE</title>
+<meta name="description" content="Insights on web development, UI design, hosting, and maintenance by Ahmad Alawieh.">
+<link rel="canonical" href="https://www.atocode.online/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.atocode.online/blog.html">
+<meta property="og:title" content="ATOCODE Blog — Web Dev Insights">
+<meta property="og:description" content="Thoughts on building for the web — from code to deployment and beyond.">
+<meta property="og:image" content="https://www.atocode.online/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<style>
+.blog-content{max-width:var(--max-site);margin:0 auto;padding:40px var(--page-x) 80px}
+.blog-content h1{font-size:2.5rem;margin-bottom:8px}
+.blog-subtitle{color:var(--muted);margin-bottom:48px;font-size:1.05rem;line-height:1.6}
+.blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.blog-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:all 250ms ease}
+.blog-card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 16px 40px rgba(0,0,0,0.2)}
+.blog-card-image{aspect-ratio:2/1;background:var(--surface);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line)}
+.blog-card-image span{font-size:3rem;opacity:0.12;color:var(--accent);font-weight:900}
+.blog-card-body{padding:24px}
+.blog-card-tag{display:inline-block;padding:3px 10px;background:rgba(245,158,11,0.1);border-radius:100px;color:var(--accent);font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px}
+.blog-card h2{font-size:1.2rem;margin-bottom:8px;color:var(--ink)}
+.blog-card p{color:var(--muted);line-height:1.6;font-size:0.95rem;margin-bottom:12px}
+.blog-card-meta{display:flex;gap:20px;color:var(--faint);font-size:0.85rem}
+.blog-newsletter{background:linear-gradient(135deg,rgba(245,158,11,0.08),rgba(249,115,22,0.05));border:1px solid rgba(245,158,11,0.2);border-radius:12px;padding:32px;margin-top:48px}
+.blog-newsletter h3{color:var(--ink);margin-bottom:10px}
+.blog-newsletter p{color:var(--muted);font-size:0.95rem;line-height:1.6;margin-bottom:20px}
+.blog-newsletter-cta{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--accent);color:#000;font-weight:600;border-radius:8px;transition:all 200ms ease}
+.blog-newsletter-cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(245,158,11,0.25)}
+@media(max-width:768px){.blog-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-header" id="site-header"></header>
 
-      <div class="blog-grid">
-        <a href="articles/static-sites.html" class="blog-card">
-          <div class="blog-card-image"><span>&lt;/&gt;</span></div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag">Web Development</span>
-            <h2>Why static sites still win in 2026</h2>
-            <p>The case for static HTML in a framework-obsessed world.</p>
-            <div class="blog-card-meta"><span>May 2026</span><span>4 min read</span></div>
-          </div>
-        </a>
+<main>
+<div class="blog-content">
+<h1>Blog</h1>
+<p class="blog-subtitle">Thoughts on building for the web — from code to deployment and beyond.</p>
 
-        <a href="articles/conversion-design.html" class="blog-card">
-          <div class="blog-card-image"><span>◻</span></div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag">UI Design</span>
-            <h2>Designing for conversion: less is always more</h2>
-            <p>The conversion-focused design framework I use on every project.</p>
-            <div class="blog-card-meta"><span>April 2026</span><span>5 min read</span></div>
-          </div>
-        </a>
+<div class="blog-grid">
+<a href="articles/static-sites.html" class="blog-card">
+<div class="blog-card-image"><span>&lt;/&gt;</span></div>
+<div class="blog-card-body">
+<span class="blog-card-tag">Web Development</span>
+<h2>Why static sites still win in 2026</h2>
+<p>The case for static HTML in a framework-obsessed world.</p>
+<div class="blog-card-meta"><span>May 2026</span><span>4 min read</span></div>
+</div>
+</a>
 
-        <a href="articles/hosting-uptime.html" class="blog-card">
-          <div class="blog-card-image"><span>⬆</span></div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag">Hosting</span>
-            <h2>How I keep client sites at 99.9% uptime</h2>
-            <p>The hosting stack that powers every client project.</p>
-            <div class="blog-card-meta"><span>March 2026</span><span>3 min read</span></div>
-          </div>
-        </a>
+<a href="articles/conversion-design.html" class="blog-card">
+<div class="blog-card-image"><span>◻</span></div>
+<div class="blog-card-body">
+<span class="blog-card-tag">UI Design</span>
+<h2>Designing for conversion: less is always more</h2>
+<p>The conversion-focused design framework I use on every project.</p>
+<div class="blog-card-meta"><span>April 2026</span><span>5 min read</span></div>
+</div>
+</a>
 
-        <a href="articles/wordpress-plugins.html" class="blog-card">
-          <div class="blog-card-image"><span>&lt;?php</span></div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag">WordPress</span>
-            <h2>Custom plugins: build once, reuse everywhere</h2>
-            <p>A repeatable plugin skeleton for WordPress development.</p>
-            <div class="blog-card-meta"><span>February 2026</span><span>6 min read</span></div>
-          </div>
-        </a>
+<a href="articles/hosting-uptime.html" class="blog-card">
+<div class="blog-card-image"><span>⬆</span></div>
+<div class="blog-card-body">
+<span class="blog-card-tag">Hosting</span>
+<h2>How I keep client sites at 99.9% uptime</h2>
+<p>The hosting stack that powers every client project.</p>
+<div class="blog-card-meta"><span>March 2026</span><span>3 min read</span></div>
+</div>
+</a>
 
-        <a href="articles/seo-essentials.html" class="blog-card">
-          <div class="blog-card-image"><span>🔍</span></div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag">SEO</span>
-            <h2>Essential SEO for every new business website</h2>
-            <p>The exact checklist I run before every site launch.</p>
-            <div class="blog-card-meta"><span>January 2026</span><span>4 min read</span></div>
-          </div>
-        </a>
+<a href="articles/wordpress-plugins.html" class="blog-card">
+<div class="blog-card-image"><span>&lt;?php</span></div>
+<div class="blog-card-body">
+<span class="blog-card-tag">WordPress</span>
+<h2>Custom plugins: build once, reuse everywhere</h2>
+<p>A repeatable plugin skeleton for WordPress development.</p>
+<div class="blog-card-meta"><span>February 2026</span><span>6 min read</span></div>
+</div>
+</a>
 
-        <a href="articles/freelancing-partner.html" class="blog-card">
-          <div class="blog-card-image"><span>🤝</span></div>
-          <div class="blog-card-body">
-            <span class="blog-card-tag">Freelancing</span>
-            <h2>Going from solo dev to trusted partner</h2>
-            <p>What turned one-off gigs into long-term retainer relationships.</p>
-            <div class="blog-card-meta"><span>December 2025</span><span>5 min read</span></div>
-          </div>
-        </a>
-      </div>
+<a href="articles/seo-essentials.html" class="blog-card">
+<div class="blog-card-image"><span>🚀</span></div>
+<div class="blog-card-body">
+<span class="blog-card-tag">SEO</span>
+<h2>Essential SEO for every new business website</h2>
+<p>The exact checklist I run before every site launch.</p>
+<div class="blog-card-meta"><span>January 2026</span><span>4 min read</span></div>
+</div>
+</a>
 
-      <div class="blog-newsletter">
-        <h3>Stay in the loop</h3>
-        <p>Occasional emails about web development, new projects, and practical tips. No spam, no fluff.</p>
-        <a class="blog-newsletter-cta" href="index.html#contact">Get in touch →</a>
-      </div>
-    </div>
+<a href="articles/freelancing-partner.html" class="blog-card">
+<div class="blog-card-image"><span>🤝</span></div>
+<div class="blog-card-body">
+<span class="blog-card-tag">Freelancing</span>
+<h2>Going from solo dev to trusted partner</h2>
+<p>What turned one-off gigs into long-term retainer relationships.</p>
+<div class="blog-card-meta"><span>December 2025</span><span>5 min read</span></div>
+</div>
+</a>
+</div>
 
-    <script>
-      (function () {
-        var toggle = document.getElementById("blogThemeToggle");
-        function applyTheme(isLight) {
-          document.body.classList.toggle("light-mode", isLight);
-          localStorage.setItem("theme", isLight ? "light" : "dark");
-        }
-        var saved = localStorage.getItem("theme");
-        if (saved === "light") applyTheme(true);
-        if (toggle) {
-          toggle.addEventListener("click", function () {
-            applyTheme(!document.body.classList.contains("light-mode"));
-          });
-        }
-      })();
-    </script>
-  </body>
+<div class="blog-newsletter">
+<h3>Stay in the loop</h3>
+<p>Occasional emails about web development, new projects, and practical tips. No spam, no fluff.</p>
+<a class="blog-newsletter-cta" href="index.html#contact">Get in touch →</a>
+</div>
+</div>
+</main>
+
+<footer class="footer" id="site-footer"></footer>
+
+<script src="components.js"></script>
+</body>
 </html>
