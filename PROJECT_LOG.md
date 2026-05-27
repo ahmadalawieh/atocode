@@ -4,11 +4,12 @@ This file is the working memory for the ATOCODE website. Update it after every m
 
 ## Current Status
 
+- **Version:** 2.3.1 (see VERSION.md)
 - Live site: https://www.atocode.online
 - GitHub repo: https://github.com/ahmadalawieh/atocode
 - Vercel project: `atocode`
 - Production branch: `main`
-- Local project folder: `C:\Users\Ahmad\OneDrive\Documents\ATOCODE`
+- Local project folder: `C:\Users\Ahmad\Desktop\ATOCODE`
 - Brand: ATOCODE by Ahmad Alawieh
 - Service area: Worldwide
 - Contact email: `ahmad.alawieh77@gmail.com`
@@ -21,72 +22,120 @@ This file is the working memory for the ATOCODE website. Update it after every m
 - GitHub connected to Vercel for automatic production deploys from `main`
 - No build step
 
+## Design System
+
+- **Palette:** Amber/coral accents (`#f59e0b`, `#f97316`, `#fbbf24`) on dark background (`#0a0a0f`)
+- **Fonts:** Clash Display (headings), Inter (body), JetBrains Mono (code)
+- **Logo:** Geometric A monogram with code brackets (amber + coral gradient)
+- **Dark/Light mode:** Theme toggle with localStorage persistence
+- **Scoped CSS variables** in `:root`
+
 ## Site Features
 
-- Neon Editorial landing page direction chosen from generated visual concepts
-- Large hero headline, pill navigation, live-status dashboard hero, capability rail, service rows, pricing cards, process cards, selected work grid, and contact form
-- Motion layer includes animated background beams, dashboard scan/glow, sparkline drawing, status pulse, card hover states, scroll reveals, and desktop dashboard tilt
-- Mobile-first header toggle with menu links and CTA inside the dropdown
-- Services: web development, UI design, hosting setup, maintenance
-- Packages:
-  - Launch: from `$700`
-  - Care: from `$120/mo`
-  - Growth: custom quote
-- Selected work section with 8 portfolio links
-- Contact form currently opens a prepared email to `ahmad.alawieh77@gmail.com`
-- Direct email and WhatsApp links
-- SEO basics:
-  - favicon
-  - Open Graph image
-  - `robots.txt`
-  - `sitemap.xml`
-  - `site.webmanifest`
-  - JSON-LD structured data
+- Warm amber/coral editorial dark theme
+- Code editor visual hero with floating info cards and animated syntax highlighting
+- Stats bar (30+ projects, 99.9% uptime, global client base)
+- Card-based services grid (web dev, UI design, hosting, maintenance) with hover effects
+- Package cards: Launch ($700+), Care ($120/mo), Growth (custom)
+- 3 client testimonials with quote styling
+- Work grid: 8 projects with custom SVG placeholders, hover overlays, link icons
+- Contact section: two-column layout with email + WhatsApp links and form
+- Footer: brand, nav links, GitHub + LinkedIn social icons
+- Mobile: horizontal slider for projects, bottom tab nav, toggle + burger side by side
+- Theme toggle on desktop (beside CTA) and mobile (beside burger)
+- Scroll reveal animations throughout
+- Lazy loading on all work images
+
+## Services
+
+- Web Development (responsive builds, landing pages, custom websites)
+- UI Design (visual systems, UX flows, design refreshes)
+- Hosting Setup (domains, SSL, deployment)
+- Maintenance (updates, monitoring, support)
+
+## Packages
+
+- Launch: from `$700` — custom design, up to 5 pages, mobile responsive, SEO, 1 month support
+- Care: from `$120/mo` — updates, security, backups, content edits, priority support
+- Growth: custom quote — features, UI/UX, speed, SEO, integrations, dedicated support
 
 ## Selected Work
 
-- B1 Ventures: https://b1-ventures.com/
-- Kaizen Firm: https://kaizen-firm.com/
-- Umbrella500: https://www.umbrella500.com/
-- Stagaway: https://stagaway.world/
-- DioramaVR: https://dioramavr.com/
-- Inbalance AI: https://inbalance.ai/
-- Fraise Studio: https://fraise.studio/
-- DanaLand: https://danalandkids.com/
+- B1 Ventures: https://b1-ventures.com/ (Finance)
+- Kaizen Firm: https://kaizen-firm.com/ (Recruitment)
+- Umbrella500: https://www.umbrella500.com/ (Venture Studio)
+- Stagaway: https://stagaway.world/ (Travel)
+- DioramaVR: https://dioramavr.com/ (VR)
+- Inbalance AI: https://inbalance.ai/ (AI)
+- Fraise Studio: https://fraise.studio/ (Creative Studio)
+- DanaLand: https://danalandkids.com/ (Education)
 
 ## Deployment History
 
 - `9bd6a93` - Initial ATOCODE website
 - `de3ed43` - Add contact form and SEO basics
 - `5d16854` - Add brand details packages and selected work
+- `dfc4713` - Neon Editorial revamp (v1.0.0)
+- `bf2961f` - Complete design revamp: amber palette, code editor hero (v2.0.0)
+- `3225663` - Testimonials, theme toggle, lazy loading (v2.2.0)
+- `d802621` - Mobile UX overhaul, toggle positioning (v2.3.0)
+- `765642f` - Mobile menu dropdown fix (v2.3.1)
 
 ## Next Recommended Work
 
-- Replace mailto form with direct submissions using Formspree or Resend.
-- Add richer portfolio case studies with screenshots, roles, and outcomes.
-- Add privacy policy if collecting form submissions.
-- Improve mobile visual QA after major layout changes.
-- Add analytics if needed, preferably privacy-friendly.
+- Replace placeholder images with actual project screenshots
+- Replace mailto form with direct submissions using Formspree or Resend
+- Add richer portfolio case studies with screenshots, roles, and outcomes
+- Add privacy policy if collecting form submissions
+- Add analytics (privacy-friendly: Fathom, Plausible)
+- Improve mobile visual QA
+- Add a dedicated blog/insights section
 
 ## Edit Log
 
-### 2026-05-05
+### 2026-05-10 — v2.3.1
 
-- Added this `PROJECT_LOG.md` file to preserve project state and future edit history.
-- Rebuilt the landing page design around the provided Webflow references while keeping the existing ATOCODE content, services, packages, selected work, and contact details.
-- Replaced the prior neon card layout with a larger editorial dark hero, lime capability marquee, light package/work sections, row-based services, refined process cards, and responsive mobile fixes.
-- Verified desktop and mobile first-viewport screenshots locally with headless Chrome and removed temporary QA screenshots before commit.
-- Updated the accent system from lime to a more tech-forward violet, cyan, and magenta palette across CSS, canvas animation, favicon, and Open Graph image.
-- Aligned the desktop header with the same responsive page gutters as the hero, increased hero text line height, added live canvas data streams/orbiting motion, animated studio cards, and replaced the messy mobile header with a toggle dropdown menu that includes nav links plus the CTA.
+- Fixed mobile menu dropdown not appearing (removed `display:none` blocking `visibility:visible`)
+- Fixed mobile menu JS selector targeting
+- Cleaned up CSS conflicts between header-actions and mobile-header-actions
+- Created VERSION.md and updated PROJECT_LOG.md with version tracking
+- Added version meta tag to HTML and CSS
 
-### 2026-05-06
+### 2026-05-10 — v2.3.0
 
-- Implemented the selected `05 Neon Editorial` concept as the new homepage direction.
-- Replaced the abstract hero canvas/studio cards with a live-status dashboard containing uptime, response time, active sites, deployments, and service monitor rows.
-- Reworked the page into dark premium full-width bands with violet, cyan, blue, magenta, and green status accents while preserving existing services, packages, selected work, and contact details.
-- Added interaction polish: animated header mark shine, hero beams, dashboard scan, sparkline drawing, status pulse, scroll reveal transitions, desktop dashboard tilt, and refined hover states.
-- Focused responsive behavior on the mobile header dropdown, stacked hero, flexible dashboard cards, single-column service/package/process/work grids, and non-overflowing contact links/form fields.
-- Verified JavaScript syntax and desktop/mobile first-viewport screenshots with headless Chrome; removed temporary QA screenshots before commit.
-- Fixed the intro `Positioning` kicker so the grid no longer stretches it into a tall vertical pill.
-- Moved the intro `Positioning` kicker above the intro title so it matches the section-heading pattern used elsewhere on the site.
-- Created the ATOCODE brand logo system with a geometric `A` monogram framed by code brackets, including SVG source files, PNG social/avatar exports, updated favicon, updated Open Graph image, and website header/footer logo usage.
+- Mobile header: theme toggle beside burger menu on mobile, beside CTA on desktop
+- Projects section: horizontal slider with scroll-snap on mobile
+- Hero: image before stats on tablet/mobile
+- Header/footer logo SVG updated to match brand mark design
+- Custom SVG placeholders for all 8 portfolio projects
+
+### 2026-05-09 — v2.2.0
+
+- Testimonials section (3 client quotes between Work and Contact)
+- Dark/light theme toggle with localStorage persistence
+- Lazy loading on all work images
+- Updated brand identity: amber/coral palette for all SVGs (favicon, OG, brand marks)
+
+### 2026-05-08 — v2.1.0
+
+- Custom SVG project placeholder images (8 projects, each with unique design)
+
+### 2026-05-07 — v2.0.0
+
+- Complete redesign: amber/coral palette, code editor hero, card-based layout
+- Clash Display typography for headings, JetBrains Mono for code
+- Services as cards, packages with feature lists, work with image thumbnails
+- Two-column contact section, footer with GitHub & LinkedIn social links
+- Scroll reveal animations, floating card effects, hover transitions
+
+### 2026-05-06 — v1.1.0
+
+- ATOCODE brand logo system with geometric A monogram and code brackets
+- SVG/PNG exports for social media, updated favicon and Open Graph image
+
+### 2026-05-05 — v1.0.0
+
+- Initial build with Neon Editorial landing page
+- Live-status dashboard hero, animated beams, sparkline charts
+- Mobile-first header toggle, service rows, packages, work grid
+- SEO: robots.txt, sitemap.xml, site.webmanifest, JSON-LD

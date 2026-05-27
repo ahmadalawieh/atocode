@@ -1,3 +1,5 @@
+/* ATOCODE Website — v2.3.1 */
+
 const siteHeader = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenuToggle = document.querySelector(".mobile-header-actions .menu-toggle");
