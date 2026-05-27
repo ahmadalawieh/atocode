@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Privacy Policy — ATOCODE</title>
     <meta name="description" content="Privacy policy for ATOCODE website and services by Ahmad Alawieh.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.atocode.online/privacy.html">
+    <meta property="og:title" content="Privacy Policy — ATOCODE">
+    <meta property="og:description" content="How ATOCODE handles your data. No tracking, no cookies, no selling.">
+    <meta property="og:image" content="https://www.atocode.online/og-image.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Privacy Policy — ATOCODE">
+    <meta name="twitter:description" content="How ATOCODE handles your data.">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -15,11 +23,20 @@
       .privacy-page p, .privacy-page li { color: var(--muted); line-height: 1.8; font-size: 1rem; }
       .privacy-page ul { padding-left: 20px; }
       .privacy-back { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 40px; color: var(--accent); font-weight: 600; }
+      .privacy-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 30px; }
+      .privacy-theme-toggle { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: transparent; border: 1px solid var(--line); border-radius: 10px; color: var(--muted); cursor: pointer; transition: all 200ms ease; }
+      .privacy-theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+      .privacy-theme-toggle svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; }
     </style>
   </head>
   <body>
     <div class="privacy-page">
-      <a class="privacy-back" href="index.html">← Back to ATOCODE</a>
+      <div class="privacy-top">
+        <a class="privacy-back" href="index.html">← Back to ATOCODE</a>
+        <button class="privacy-theme-toggle" type="button" aria-label="Toggle theme" id="privacyThemeToggle">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+      </div>
       <h1>Privacy Policy</h1>
       <p class="privacy-date">Last updated: May 2026</p>
 
@@ -59,5 +76,22 @@
       <p>If you have questions about this privacy policy, reach out to:</p>
       <p>Email: <strong>ahmad.alawieh77@gmail.com</strong><br>WhatsApp: <strong>+961 70 332 361</strong></p>
     </div>
+
+    <script>
+      (function () {
+        var toggle = document.getElementById("privacyThemeToggle");
+        function applyTheme(isLight) {
+          document.body.classList.toggle("light-mode", isLight);
+          localStorage.setItem("theme", isLight ? "light" : "dark");
+        }
+        var saved = localStorage.getItem("theme");
+        if (saved === "light") applyTheme(true);
+        if (toggle) {
+          toggle.addEventListener("click", function () {
+            applyTheme(!document.body.classList.contains("light-mode"));
+          });
+        }
+      })();
+    </script>
   </body>
 </html>

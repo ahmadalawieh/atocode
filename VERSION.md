@@ -7,11 +7,19 @@
 
 ---
 
-## Current Version: **2.4.0** (2026-05-10)
+## Current Version: **2.5.0** (2026-05-10)
 
 ---
 
 ## Version History
+
+### v2.5.0 (2026-05-10)
+
+- **Active nav highlighting:** Nav links glow amber when their section scrolls into view
+- **Blog expansion:** 6 articles across 6 categories, newsletter CTA, dark/light mode toggle
+- **Privacy page:** Added dark/light mode toggle, richer OG metadata
+- **OG metadata:** Added `og:image:width/height`, `og:locale`, `og:site_name`, `twitter:creator` to all pages
+- **Footer animation:** Subtle amber border glow cycling every 6 seconds
 
 ### v2.4.0 (2026-05-10)
 

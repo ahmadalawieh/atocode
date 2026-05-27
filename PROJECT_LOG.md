@@ -4,7 +4,7 @@ This file is the working memory for the ATOCODE website. Update it after every m
 
 ## Current Status
 
-- **Version:** 2.4.0 (see VERSION.md)
+- **Version:** 2.5.0 (see VERSION.md)
 - Live site: https://www.atocode.online
 - GitHub repo: https://github.com/ahmadalawieh/atocode
 - Vercel project: `atocode`
@@ -92,6 +92,14 @@ This file is the working memory for the ATOCODE website. Update it after every m
 - Add a dedicated blog/insights section
 
 ## Edit Log
+
+### 2026-05-10 — v2.5.0
+
+- **Active nav highlighting:** IntersectionObserver tracks which section is in view and highlights the matching nav link
+- **Blog expansion:** Added 3 more articles (WordPress plugins, SEO essentials, freelancing), newsletter CTA
+- **Dark/light mode:** Added persistent theme toggle to blog.html and privacy.html
+- **OG metadata:** Richer Open Graph and Twitter Card metadata on all pages
+- **Footer animation:** Subtle amber border glow on footer-bottom divider
 
 ### 2026-05-10 — v2.4.0
 

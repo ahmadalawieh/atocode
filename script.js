@@ -1,4 +1,4 @@
-/* ATOCODE Website — v2.4.0 */
+/* ATOCODE Website — v2.5.0 */
 
 const siteHeader = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
@@ -79,6 +79,35 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach(revealVisible);
 }
 
+/* ─── Active Nav Highlighting ─── */
+const navLinks = document.querySelectorAll(".nav a[href^='#']");
+const mobileNavLinks = document.querySelectorAll(".mobile-nav a[href^='#']");
+const allNavLinks = [...navLinks, ...mobileNavLinks];
+
+const sections = [...document.querySelectorAll("section[id]")]
+  .map((section) => section.id);
+
+if (allNavLinks.length && sections.length && "IntersectionObserver" in window) {
+  const navObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const id = entry.target.id;
+        allNavLinks.forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+        });
+      });
+    },
+    { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+  );
+
+  sections.forEach((sid) => {
+    const el = document.getElementById(sid);
+    if (el) navObserver.observe(el);
+  });
+}
+
+/* ─── Contact Form ─── */
 const contactForm = document.querySelector("#contactForm");
 const formStatus = document.querySelector("#formStatus");
 

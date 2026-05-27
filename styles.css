@@ -182,9 +182,15 @@ p {
   transition: all 200ms ease;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a:focus-visible {
   color: var(--ink);
   background: rgba(255, 255, 255, 0.05);
+}
+
+.nav a.active {
+  color: var(--accent);
+  background: rgba(245, 158, 11, 0.1);
 }
 
 .menu-toggle {
@@ -1442,6 +1448,12 @@ p {
   border-top: 1px solid var(--line);
   color: var(--faint);
   font-size: 0.9rem;
+  animation: footer-glow 6s ease-in-out infinite;
+}
+
+@keyframes footer-glow {
+  0%, 100% { border-color: var(--line); }
+  50% { border-color: rgba(245, 158, 11, 0.25); }
 }
 
 [data-reveal] {
