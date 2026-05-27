@@ -7,11 +7,19 @@
 
 ---
 
-## Current Version: **2.6.0** (2026-05-10)
+## Current Version: **2.7.0** (2026-05-10)
 
 ---
 
 ## Version History
+
+### v2.7.0 (2026-05-10)
+
+- **Accessibility:** Global `:focus-visible` keyboard outlines on all interactive elements
+- **Case studies expanded:** 6 projects now (added Stagaway, Inbalance AI, DanaLand)
+- **FAQ section:** 6 common client questions with accordion-style expand/collapse
+- **Blog expansion:** Articles are now clickable `<details>` elements, each opens full article content; auto-closes others
+- **CSS minification:** Stripped all comments from stylesheet for smaller payload
 
 ### v2.6.0 (2026-05-10)
 

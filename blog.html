@@ -26,20 +26,26 @@
       .blog-theme-toggle svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; }
       .blog-page h1 { font-size: 2.5rem; margin-bottom: 8px; }
       .blog-subtitle { color: var(--muted); margin-bottom: 48px; font-size: 1.05rem; line-height: 1.6; }
-      .blog-grid { display: flex; flex-direction: column; gap: 32px; }
-      .blog-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 32px; transition: all 250ms ease; }
-      .blog-card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 16px 40px rgba(0,0,0,0.2); }
-      .blog-card-tag { display: inline-block; padding: 4px 12px; background: rgba(245,158,11,0.1); border-radius: 100px; color: var(--accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
-      .blog-card h2 { font-size: 1.4rem; margin-bottom: 10px; color: var(--ink); }
-      .blog-card p { color: var(--muted); line-height: 1.7; margin-bottom: 20px; font-size: 0.975rem; }
-      .blog-card-meta { display: flex; gap: 24px; color: var(--faint); font-size: 0.85rem; }
-      .blog-card-meta span { display: inline-flex; align-items: center; gap: 6px; }
+      .blog-grid { display: flex; flex-direction: column; gap: 24px; }
+      .blog-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; transition: all 250ms ease; }
+      .blog-card:hover { border-color: var(--accent); }
+      .blog-card summary { padding: 28px 32px; font-weight: 600; font-size: 1.15rem; color: var(--ink); cursor: pointer; list-style: none; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px; }
+      .blog-card summary::-webkit-details-marker { display: none; }
+      .blog-card summary::after { content: "Read →"; font-size: 0.85rem; color: var(--accent); font-weight: 500; flex-shrink: 0; }
+      .blog-card[open] summary::after { content: "Close ↑"; }
+      .blog-card[open] summary { border-bottom: 1px solid var(--line); }
+      .blog-card-tag { display: inline-block; padding: 3px 10px; background: rgba(245,158,11,0.1); border-radius: 100px; color: var(--accent); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0; }
+      .blog-card-body { padding: 0 32px 28px; }
+      .blog-card-body p { color: var(--muted); line-height: 1.8; font-size: 1rem; margin-bottom: 16px; }
+      .blog-card-body p:first-child { margin-top: 24px; }
+      .blog-card-body ul { color: var(--muted); line-height: 1.8; padding-left: 20px; margin-bottom: 16px; }
+      .blog-card-meta { display: flex; gap: 24px; color: var(--faint); font-size: 0.85rem; padding-top: 16px; border-top: 1px solid var(--line); }
       .blog-newsletter { background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(249,115,22,0.05)); border: 1px solid rgba(245,158,11,0.2); border-radius: 12px; padding: 32px; margin-top: 48px; }
       .blog-newsletter h3 { color: var(--ink); margin-bottom: 10px; }
       .blog-newsletter p { color: var(--muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
       .blog-newsletter-cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--accent); color: #000; font-weight: 600; border-radius: 8px; transition: all 200ms ease; }
       .blog-newsletter-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(245,158,11,0.25); }
-      @media (max-width: 500px) { .blog-page h1 { font-size: 2rem; } }
+      @media (max-width: 500px) { .blog-page h1 { font-size: 2rem; } .blog-card summary { padding: 22px 24px; } .blog-card-body { padding: 0 24px 22px; } }
     </style>
   </head>
   <body>
@@ -51,50 +57,108 @@
         </button>
       </div>
       <h1>Blog</h1>
-      <p class="blog-subtitle">Thoughts on building for the web — from code to deployment and beyond.</p>
+      <p class="blog-subtitle">Thoughts on building for the web — from code to deployment and beyond. Click any article to read.</p>
 
       <div class="blog-grid">
-        <article class="blog-card">
-          <span class="blog-card-tag">Web Development</span>
-          <h2>Why static sites still win in 2026</h2>
-          <p>Between the noise of SSR, ISR, and edge functions, the humble static HTML page remains the fastest, most secure, and easiest to maintain option for most business websites. Here's when to choose it and how to get 100 Lighthouse scores every time.</p>
-          <div class="blog-card-meta"><span>May 2026</span><span>4 min read</span></div>
-        </article>
+        <details class="blog-card">
+          <summary><span class="blog-card-tag">Web Development</span> Why static sites still win in 2026</summary>
+          <div class="blog-card-body">
+            <p>Between the noise of SSR, ISR, and edge functions, the humble static HTML page remains the fastest, most secure, and easiest to maintain option for most business websites.</p>
+            <p>Here's why I still reach for static sites as a first option:</p>
+            <ul>
+              <li><strong>Speed:</strong> No server processing per request — static files serve directly from CDN edges. 100 Lighthouse scores are the default, not the reward.</li>
+              <li><strong>Security:</strong> No database, no server-side code execution, no plugin vulnerabilities. Attack surface is near zero.</li>
+              <li><strong>Cost:</strong> Free hosting on Vercel, Cloudflare Pages, or GitHub Pages. No server bills, no scaling costs.</li>
+              <li><strong>Simplicity:</strong> No build pipelines for content changes. HTML + CSS + JS — three files, infinite possibilities.</li>
+              <li><strong>Longevity:</strong> A static site built today will load exactly the same in 10 years. No dependency rot, no framework churn.</li>
+            </ul>
+            <p>Static isn't a compromise — it's a deliberate engineering choice. For portfolios, landing pages, documentation sites, and business websites under 50 pages, it's the smartest move you can make.</p>
+            <div class="blog-card-meta"><span>May 2026</span><span>4 min read</span></div>
+          </div>
+        </details>
 
-        <article class="blog-card">
-          <span class="blog-card-tag">UI Design</span>
-          <h2>Designing for conversion: less is always more</h2>
-          <p>Most websites fail not because of bad code, but because of cluttered design. I break down the principles of conversion-focused layout — visual hierarchy, whitespace, clear CTAs, and how to remove friction from every user journey.</p>
-          <div class="blog-card-meta"><span>April 2026</span><span>5 min read</span></div>
-        </article>
+        <details class="blog-card">
+          <summary><span class="blog-card-tag">UI Design</span> Designing for conversion: less is always more</summary>
+          <div class="blog-card-body">
+            <p>Most websites fail not because of bad code, but because of cluttered design. Visitors make a decision about your site in 50 milliseconds — before they read a single word.</p>
+            <p>Here's the conversion-focused design framework I use on every project:</p>
+            <ul>
+              <li><strong>One goal per page:</strong> Every page should have exactly one primary action. If a visitor can do five things, they'll do none.</li>
+              <li><strong>Visual hierarchy:</strong> The most important element should be the most visually dominant. Size, colour, whitespace, and position all signal importance.</li>
+              <li><strong>Whitespace is a feature:</strong> Don't fill every pixel. Generous spacing makes content readable and creates a premium feel. Apple's website is 70% whitespace.</li>
+              <li><strong>Clear CTAs:</strong> Buttons should say what happens next. Not "Submit" — "Start Your Project". Not "Learn More" — "See How It Works".</li>
+              <li><strong>Remove friction:</strong> Every extra field, unnecessary step, or confusing label costs you conversions. Audit your forms — can anything be removed?</li>
+            </ul>
+            <p>The best-designed website isn't the prettiest — it's the one where visitors effortlessly do what you want them to do.</p>
+            <div class="blog-card-meta"><span>April 2026</span><span>5 min read</span></div>
+          </div>
+        </details>
 
-        <article class="blog-card">
-          <span class="blog-card-tag">Hosting &amp; Performance</span>
-          <h2>How I keep client sites at 99.9% uptime</h2>
-          <p>Behind every reliable website is a boring but essential stack: Vercel for deployments, Cloudflare for DNS and caching, automated uptime monitoring, and proactive maintenance. This is the exact setup I use for every client I work with.</p>
-          <div class="blog-card-meta"><span>March 2026</span><span>3 min read</span></div>
-        </article>
+        <details class="blog-card">
+          <summary><span class="blog-card-tag">Hosting</span> How I keep client sites at 99.9% uptime</summary>
+          <div class="blog-card-body">
+            <p>Behind every reliable website is a boring but essential stack. Here's exactly what I deploy for every client who trusts me with their hosting:</p>
+            <ul>
+              <li><strong>Vercel:</strong> For static sites and Next.js apps. Zero-config deploys from Git, automatic HTTPS, global CDN.</li>
+              <li><strong>Cloudflare:</strong> DNS management, DDoS protection, caching rules, and page rules for redirects. The free plan covers 95% of use cases.</li>
+              <li><strong>Uptime monitoring:</strong> Every client site has automated health checks pinging every 5 minutes. If something goes down, I know before the client does.</li>
+              <li><strong>Backups:</strong> Git history serves as version control. Database sites get automated daily backups to off-site storage.</li>
+              <li><strong>Proactive maintenance:</strong> Monthly reviews of SSL certificates, domain renewals, plugin updates, and performance audits. Nothing expires unnoticed.</li>
+            </ul>
+            <p>Reliability isn't about heroics when things break — it's about building a system where things rarely break in the first place.</p>
+            <div class="blog-card-meta"><span>March 2026</span><span>3 min read</span></div>
+          </div>
+        </details>
 
-        <article class="blog-card">
-          <span class="blog-card-tag">WordPress</span>
-          <h2>Custom WordPress plugins: build once, reuse everywhere</h2>
-          <p>Over the years I've built investor portals, moderation tools, and WooCommerce integrations as WordPress plugins. Here's my approach to structuring plugins for maintainability, security, and reusability across client projects.</p>
-          <div class="blog-card-meta"><span>February 2026</span><span>6 min read</span></div>
-        </article>
+        <details class="blog-card">
+          <summary><span class="blog-card-tag">WordPress</span> Custom plugins: build once, reuse everywhere</summary>
+          <div class="blog-card-body">
+            <p>Over the years I've built investor portals, moderation tools, WooCommerce integrations, and reaction systems as WordPress plugins. Here's my approach to structuring plugins for maintainability and reusability.</p>
+            <p>Every plugin I build follows the same skeleton:</p>
+            <ul>
+              <li><strong>Main file:</strong> Plugin header, constants, auto-load includes, activation/deactivation hooks</li>
+              <li><strong>includes/:</strong> Database setup, core logic, shortcodes, APIs, email templates</li>
+              <li><strong>admin/:</strong> Admin menus, settings pages, user data managers</li>
+              <li><strong>public/:</strong> Front-end templates, CSS, JS — scoped to avoid theme conflicts</li>
+            </ul>
+            <p>This structure means I can start a new plugin for any client in under an hour by pulling the skeleton and focusing on business logic. Clean separation of concerns, WordPress coding standards, and security best practices baked in from day one.</p>
+            <div class="blog-card-meta"><span>February 2026</span><span>6 min read</span></div>
+          </div>
+        </details>
 
-        <article class="blog-card">
-          <span class="blog-card-tag">SEO</span>
-          <h2>Essential SEO for every new business website</h2>
-          <p>You don't need expensive tools to rank. A clean sitemap, structured data, fast load times, and well-written content go further than most realise. Here's exactly what I set up for every client site before launch.</p>
-          <div class="blog-card-meta"><span>January 2026</span><span>4 min read</span></div>
-        </article>
+        <details class="blog-card">
+          <summary><span class="blog-card-tag">SEO</span> Essential SEO for every new business website</summary>
+          <div class="blog-card-body">
+            <p>You don't need expensive tools to rank. A clean setup and well-written content go further than most realise. Here's exactly what I configure for every client site before launch:</p>
+            <ul>
+              <li><strong>Meta tags:</strong> Every page gets a unique title and description. Open Graph and Twitter Card tags for rich link previews.</li>
+              <li><strong>Structured data:</strong> JSON-LD for business info, breadcrumbs, and FAQ sections. Search engines love structured content.</li>
+              <li><strong>Sitemap + robots.txt:</strong> XML sitemap submitted to Google Search Console. Clean robots.txt that doesn't accidentally block content.</li>
+              <li><strong>Performance:</strong> Page speed is a direct ranking factor. Target under 2s load time, under 100KB CSS, lazy-loaded images.</li>
+              <li><strong>Content structure:</strong> One H1 per page, clear heading hierarchy, descriptive alt text on all images, readable URLs.</li>
+              <li><strong>Google Search Console:</strong> Set up, verify, submit sitemap, monitor for crawl errors. Free and essential.</li>
+            </ul>
+            <p>SEO isn't magic. It's doing the fundamentals consistently and letting quality content do the rest.</p>
+            <div class="blog-card-meta"><span>January 2026</span><span>4 min read</span></div>
+          </div>
+        </details>
 
-        <article class="blog-card">
-          <span class="blog-card-tag">Freelancing</span>
-          <h2>Going from solo dev to trusted partner</h2>
-          <p>Clients don't hire code — they hire reliability. I share how building systems, documenting everything, and over-communicating turned one-off gigs into long-term retainer relationships.</p>
-          <div class="blog-card-meta"><span>December 2025</span><span>5 min read</span></div>
-        </article>
+        <details class="blog-card">
+          <summary><span class="blog-card-tag">Freelancing</span> Going from solo dev to trusted partner</summary>
+          <div class="blog-card-body">
+            <p>Clients don't hire code — they hire reliability. The developers who get retained long-term aren't the most technically brilliant. They're the ones who communicate clearly, document everything, and make their clients feel taken care of.</p>
+            <p>Here's what turned my one-off gigs into ongoing retainers:</p>
+            <ul>
+              <li><strong>Over-communicate:</strong> Send updates before the client has to ask. A 2-minute WhatsApp message on Friday saves an anxious weekend of wondering.</li>
+              <li><strong>Document everything:</strong> Every project gets an INSTRUCTIONS.md. Clients shouldn't be locked into me — they should choose to stay because I add value.</li>
+              <li><strong>Under-promise, over-deliver:</strong> If you think it takes 2 weeks, say 3. Deliver in 2.5. Clients remember the surprise, not the quote.</li>
+              <li><strong>Think beyond the build:</strong> Ask about maintenance, training, content strategy. Clients don't know what they don't know — be their guide, not just their coder.</li>
+              <li><strong>Be available but boundaried:</strong> Respond within 24 hours, but protect your deep work time. Clear expectations prevent burnout and resentment.</li>
+            </ul>
+            <p>The goal isn't to be the cheapest developer — it's to be the one they never want to replace.</p>
+            <div class="blog-card-meta"><span>December 2025</span><span>5 min read</span></div>
+          </div>
+        </details>
       </div>
 
       <div class="blog-newsletter">
@@ -105,20 +169,27 @@
     </div>
 
     <script>
-      /* Shared theme logic for blog & privacy pages */
       (function () {
-        const themeToggle = document.getElementById("blogThemeToggle");
-        const applyTheme = function (isLight) {
+        var toggle = document.getElementById("blogThemeToggle");
+        function applyTheme(isLight) {
           document.body.classList.toggle("light-mode", isLight);
           localStorage.setItem("theme", isLight ? "light" : "dark");
-        };
-        const saved = localStorage.getItem("theme");
+        }
+        var saved = localStorage.getItem("theme");
         if (saved === "light") applyTheme(true);
-        if (themeToggle) {
-          themeToggle.addEventListener("click", function () {
+        if (toggle) {
+          toggle.addEventListener("click", function () {
             applyTheme(!document.body.classList.contains("light-mode"));
           });
         }
+        var cards = document.querySelectorAll(".blog-card");
+        cards.forEach(function (card) {
+          card.addEventListener("toggle", function () {
+            cards.forEach(function (other) {
+              if (other !== card) other.removeAttribute("open");
+            });
+          });
+        });
       })();
     </script>
   </body>

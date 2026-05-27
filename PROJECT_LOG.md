@@ -4,7 +4,7 @@ This file is the working memory for the ATOCODE website. Update it after every m
 
 ## Current Status
 
-- **Version:** 2.6.0 (see VERSION.md)
+- **Version:** 2.7.0 (see VERSION.md)
 - Live site: https://www.atocode.online
 - GitHub repo: https://github.com/ahmadalawieh/atocode
 - Vercel project: `atocode`
@@ -92,6 +92,14 @@ This file is the working memory for the ATOCODE website. Update it after every m
 - Add a dedicated blog/insights section
 
 ## Edit Log
+
+### 2026-05-10 — v2.7.0
+
+- **Accessibility:** Added global `:focus-visible` outlines on links, buttons, inputs, selects, and textareas
+- **Case studies expanded:** 6 projects now (Stagaway, Inbalance AI, DanaLand added)
+- **FAQ section:** Added 6 common questions with native `<details>` accordion before contact
+- **Blog expansion:** Articles use `<details>` for click-to-expand full content; auto-close others
+- **CSS minification:** Stripped all comments for smaller stylesheet payload
 
 ### 2026-05-10 — v2.6.0
 

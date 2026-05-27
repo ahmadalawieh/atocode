@@ -1,4 +1,4 @@
-/* ATOCODE Website â€” v2.6.0 â€” https://github.com/ahmadalawieh/atocode */
+/* ATOCODE Website — v2.7.0 — https://github.com/ahmadalawieh/atocode */
 :root {
   color-scheme: dark;
   --bg: #0a0a0f;
@@ -106,6 +106,15 @@ p {
 ::selection {
   background: rgba(245, 158, 11, 0.3);
   color: #fff;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .sr-only {
@@ -1583,7 +1592,73 @@ p {
   .packages-section,
   .work-section,
   .testimonials-section,
-  .contact-section {
+.faq-section {
+  background: var(--bg);
+  padding: 100px var(--page-x);
+}
+
+.faq-inner {
+  max-width: var(--max-site);
+  margin: 0 auto;
+}
+
+.faq-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  transition: all 300ms ease;
+}
+
+.faq-item:hover {
+  border-color: var(--accent);
+}
+
+.faq-item summary {
+  padding: 20px 24px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.3rem;
+  color: var(--accent);
+  font-weight: 400;
+  transition: transform 300ms ease;
+  flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+  content: "\2212";
+  transform: rotate(180deg);
+}
+
+.faq-item p {
+  padding: 0 24px 20px;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.contact-section {
     padding: 60px var(--page-x);
   }
   
