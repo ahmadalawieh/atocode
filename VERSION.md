@@ -7,11 +7,17 @@
 
 ---
 
-## Current Version: **2.5.0** (2026-05-10)
+## Current Version: **2.6.0** (2026-05-10)
 
 ---
 
 ## Version History
+
+### v2.6.0 (2026-05-10)
+
+- **Critical CSS inlining:** Above-the-fold styles inlined in `<style>` tag, full stylesheet deferred with `media="print" onload` pattern
+- **404 page:** Custom `404.html` with matching dark theme, amber accent, and back-to-home CTA
+- **Clean URLs:** Added `_redirects` file for Vercel — `/blog` and `/privacy` without `.html`
 
 ### v2.5.0 (2026-05-10)
 

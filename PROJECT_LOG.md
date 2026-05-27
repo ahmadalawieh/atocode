@@ -4,7 +4,7 @@ This file is the working memory for the ATOCODE website. Update it after every m
 
 ## Current Status
 
-- **Version:** 2.5.0 (see VERSION.md)
+- **Version:** 2.6.0 (see VERSION.md)
 - Live site: https://www.atocode.online
 - GitHub repo: https://github.com/ahmadalawieh/atocode
 - Vercel project: `atocode`
@@ -92,6 +92,12 @@ This file is the working memory for the ATOCODE website. Update it after every m
 - Add a dedicated blog/insights section
 
 ## Edit Log
+
+### 2026-05-10 — v2.6.0
+
+- **Critical CSS inlining:** Above-the-fold CSS (~3KB) inlined in `<style>` tag for faster LCP; full stylesheet deferred
+- **404 page:** Custom `404.html` with amber branding and back-to-home link
+- **Clean URLs:** `_redirects` file for Vercel clean URL routing (`/blog`, `/privacy`, `/*` → 404)
 
 ### 2026-05-10 — v2.5.0
 
