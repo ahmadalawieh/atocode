@@ -1613,7 +1613,7 @@ textarea:focus-visible {
   border: 1px solid var(--line);
   border-radius: var(--card-radius);
   overflow: hidden;
-  transition: all 300ms ease;
+  transition: border-color 300ms ease;
 }
 
 .faq-item:hover {
@@ -1648,7 +1648,6 @@ textarea:focus-visible {
 
 .faq-item[open] summary::after {
   content: "\2212";
-  transform: rotate(180deg);
 }
 
 .faq-item p {
@@ -1697,6 +1696,10 @@ textarea:focus-visible {
   .case-study-meta {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .faq-section {
+    padding: 60px var(--page-x);
   }
 }
 

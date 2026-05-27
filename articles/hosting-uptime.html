@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How I keep client sites at 99.9% uptime — ATOCODE Blog</title>
+<meta name="description" content="The exact hosting stack I deploy for every client: Vercel, Cloudflare, uptime monitoring, and proactive maintenance.">
+<meta property="og:title" content="How I keep client sites at 99.9% uptime">
+<meta property="og:description" content="Reliability isn't heroics — it's building systems where things rarely break.">
+<meta property="og:image" content="https://www.atocode.online/og-image.svg">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../styles.css">
+<style>
+.article-page{max-width:780px;margin:0 auto;padding:120px 20px 80px;color:var(--ink)}
+.article-back{color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:8px;margin-bottom:32px}
+.article-hero{aspect-ratio:2/1;background:linear-gradient(135deg,#0a1f1a,#0f2a24);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:40px;border:1px solid var(--line)}
+.article-hero span{font-size:4rem;opacity:0.15;color:#22c55e;font-weight:900}
+.article-tag{display:inline-block;padding:4px 12px;background:rgba(245,158,11,0.1);border-radius:100px;color:var(--accent);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:16px}
+.article-page h1{font-size:2.2rem;margin-bottom:12px}
+.article-meta{display:flex;gap:24px;color:var(--faint);font-size:.9rem;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.article-body h2{font-size:1.3rem;margin:36px 0 12px}
+.article-body p{color:var(--muted);line-height:1.8;font-size:1.05rem;margin-bottom:16px}
+.article-body ul{padding-left:20px;color:var(--muted);line-height:1.8;margin-bottom:20px}
+.article-body li{margin-bottom:8px}
+.article-body strong{color:var(--ink)}
+@media(max-width:500px){.article-page h1{font-size:1.75rem}}
+</style>
+</head>
+<body class="article-page">
+<a class="article-back" href="../blog.html">← Back to Blog</a>
+<div class="article-hero"><span>⬆</span></div>
+<span class="article-tag">Hosting &amp; Performance</span>
+<h1>How I keep client sites at 99.9% uptime</h1>
+<div class="article-meta"><span>Ahmad Alawieh</span><span>March 2026</span><span>3 min read</span></div>
+<div class="article-body">
+<p>Behind every reliable website is a boring but essential stack. Here's exactly what I deploy for every client who trusts me with their hosting.</p>
+<h2>Vercel for deployments</h2>
+<p>For static sites and Next.js apps. Zero-config deploys from Git, automatic HTTPS, global CDN. Every push to main triggers a production deployment in seconds.</p>
+<h2>Cloudflare for DNS and security</h2>
+<p>DNS management, DDoS protection, caching rules, and page rules for redirects. The free plan covers 95% of use cases. Enterprise-grade security at no cost.</p>
+<h2>Automated uptime monitoring</h2>
+<p>Every client site has health checks pinging every 5 minutes. If something goes down, <strong>I know before the client does</strong>. Alerting via email and WhatsApp.</p>
+<h2>Comprehensive backups</h2>
+<p>Git history serves as version control for static sites. Database-backed sites get automated daily backups to off-site storage with 30-day retention.</p>
+<h2>Proactive maintenance</h2>
+<p>Monthly reviews of SSL certificates, domain renewals, plugin updates, and performance audits. Nothing expires unnoticed because nothing is left to chance.</p>
+<p>Reliability isn't about heroics when things break — it's about building a system where things <strong>rarely break in the first place</strong>.</p>
+</div>
+</body>
+</html>

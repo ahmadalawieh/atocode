@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Custom WordPress plugins — ATOCODE Blog</title>
+<meta name="description" content="How I structure WordPress plugins for maintainability, security, and reusability across client projects.">
+<meta property="og:title" content="Custom WordPress plugins: build once, reuse everywhere">
+<meta property="og:description" content="A repeatable plugin skeleton for WordPress development.">
+<meta property="og:image" content="https://www.atocode.online/og-image.svg">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../styles.css">
+<style>
+.article-page{max-width:780px;margin:0 auto;padding:120px 20px 80px;color:var(--ink)}
+.article-back{color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:8px;margin-bottom:32px}
+.article-hero{aspect-ratio:2/1;background:linear-gradient(135deg,#1a1828,#1a1830);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:40px;border:1px solid var(--line)}
+.article-hero span{font-size:4rem;opacity:0.15;color:#6366f1;font-weight:900}
+.article-tag{display:inline-block;padding:4px 12px;background:rgba(245,158,11,0.1);border-radius:100px;color:var(--accent);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:16px}
+.article-page h1{font-size:2.2rem;margin-bottom:12px}
+.article-meta{display:flex;gap:24px;color:var(--faint);font-size:.9rem;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.article-body h2{font-size:1.3rem;margin:36px 0 12px}
+.article-body p{color:var(--muted);line-height:1.8;font-size:1.05rem;margin-bottom:16px}
+.article-body ul{padding-left:20px;color:var(--muted);line-height:1.8;margin-bottom:20px}
+.article-body li{margin-bottom:8px}
+.article-body strong{color:var(--ink)}
+@media(max-width:500px){.article-page h1{font-size:1.75rem}}
+</style>
+</head>
+<body class="article-page">
+<a class="article-back" href="../blog.html">← Back to Blog</a>
+<div class="article-hero"><span>&lt;?php</span></div>
+<span class="article-tag">WordPress</span>
+<h1>Custom WordPress plugins: build once, reuse everywhere</h1>
+<div class="article-meta"><span>Ahmad Alawieh</span><span>February 2026</span><span>6 min read</span></div>
+<div class="article-body">
+<p>Over the years I've built investor portals, moderation tools, WooCommerce integrations, and reaction systems as WordPress plugins. Here's my approach to structuring plugins for maintainability and reusability across client projects.</p>
+<h2>The plugin skeleton</h2>
+<p>Every plugin I build follows the same proven skeleton. This consistency means I can start a new plugin for any client in under an hour by pulling the skeleton and focusing on business logic.</p>
+<ul>
+<li><strong>Main file:</strong> Plugin header, constants, auto-load includes, activation/deactivation hooks</li>
+<li><strong>includes/:</strong> Database setup, core logic, shortcodes, APIs, email templates</li>
+<li><strong>admin/:</strong> Admin menus, settings pages, user data managers</li>
+<li><strong>public/:</strong> Front-end templates, CSS, JS — scoped to avoid theme conflicts</li>
+</ul>
+<h2>Security by default</h2>
+<p>Clean separation of concerns, WordPress coding standards, and security best practices baked in from day one. Every query uses <code>$wpdb->prepare()</code>, every form uses nonces, every output is escaped.</p>
+<h2>Real-world example: B1 Investor Portal</h2>
+<p>Built for a finance client, this plugin manages per-user dashboards, documents, portfolio tracking, and payment history — all within WordPress, replaceing spreadsheets with a secure branded web app. 30+ investors onboarded in the first month.</p>
+<p>The same skeleton also powers moderation tools, reaction systems, and WooCommerce integrations for other clients. Write it once, deploy it everywhere.</p>
+</div>
+</body>
+</html>
