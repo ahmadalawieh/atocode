@@ -13,7 +13,7 @@ function renderHeader() {
     '</svg></span><span>ATOCODE</span></a>'+
     '<nav class="nav" aria-label="Main navigation">'+
     '<a href="/#services">Services</a><a href="/#packages">Packages</a>'+
-    '<a href="/#work">Work</a><a href="/#contact">Contact</a>'+
+    '<a href="/#work">Work</a><a href="/#contact">Contact</a><a href="/blog.html">Blog</a>'+
     '</nav>'+
     '<div class="header-actions">'+
     '<button class="theme-toggle" type="button" aria-label="Toggle theme" id="deskThemeToggle">'+
@@ -31,7 +31,7 @@ function renderHeader() {
     '</div>'+
     '<div class="mobile-nav">'+
     '<a href="/#services">Services</a><a href="/#packages">Packages</a>'+
-    '<a href="/#work">Work</a><a href="/#contact">Contact</a>'+
+    '<a href="/#work">Work</a><a href="/#contact">Contact</a><a href="/blog.html">Blog</a>'+
     '<a href="/#contact" class="mobile-nav-cta">Start a Project</a>'+
     '</div>';
 }
