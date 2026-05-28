@@ -1591,7 +1591,10 @@ textarea:focus-visible {
   
   .packages-section,
   .work-section,
-  .testimonials-section,
+  .testimonials-section {
+    padding: 60px var(--page-x);
+  }
+
 .faq-section {
   background: var(--bg);
   padding: 100px var(--page-x);
