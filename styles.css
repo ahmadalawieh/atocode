@@ -1596,7 +1596,7 @@ textarea:focus-visible {
   }
 
 .faq-section {
-  background: var(--bg);
+  background: var(--bg-soft);
   padding: 100px var(--page-x);
 }
 
@@ -1606,43 +1606,55 @@ textarea:focus-visible {
 }
 
 .faq-grid {
-  max-width: 780px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  border: 1px solid var(--line);
-  border-radius: var(--card-radius);
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
 .faq-card {
   background: var(--panel);
-  padding: 24px 28px;
-  transition: background 200ms ease;
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  padding: 32px;
+  transition: all 250ms ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.faq-card::before {
+  content: var(--n);
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  opacity: 0.06;
+  line-height: 1;
+  pointer-events: none;
 }
 
 .faq-card:hover {
-  background: var(--panel-strong);
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.15);
 }
 
 .faq-card h3 {
   color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 1.05rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
   letter-spacing: 0;
+  position: relative;
 }
 
 .faq-card p {
   color: var(--muted);
   line-height: 1.7;
   font-size: 0.95rem;
-}
-
-.faq-card + .faq-card {
-  border-top: 1px solid var(--line);
 }
 
 .contact-section {
@@ -1688,6 +1700,10 @@ textarea:focus-visible {
 
   .faq-section {
     padding: 60px var(--page-x);
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
   }
 }
 
