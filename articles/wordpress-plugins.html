@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Custom plugins: build once, reuse everywhere — ATOCODE Blog</title>
+<title>Custom plugins: build once, reuse everywhere ï¿½ ATOCODE Blog</title>
 <meta name="description" content="How I structure WordPress plugins for maintainability, security, and reusability across client projects.">
 <meta property="og:title" content="Custom plugins: build once, reuse everywhere">
 <meta property="og:description" content="How I structure WordPress plugins for maintainability, security, and reusability across client projects.">
@@ -13,7 +13,7 @@
 <style>
 .article-content{max-width:var(--max-site);margin:0 auto;padding:120px var(--page-x) 80px}
 .article-hero{border-radius:16px;overflow:hidden;margin-bottom:40px;border:1px solid var(--line)}
-.article-hero svg{display:block;width:100%;height:auto}
+.article-hero img{display:block;width:100%;height:auto;aspect-ratio:3/1;object-fit:cover}
 .article-body{max-width:780px;margin:0 auto}
 .article-tag{display:inline-block;padding:4px 12px;background:rgba(245,158,11,0.1);border-radius:100px;color:var(--accent);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:16px}
 .article-body h1{font-size:2.2rem;margin-bottom:12px}
@@ -28,12 +28,12 @@
 <header class="site-header" id="site-header"></header>
 <main>
 <div class="article-content">
-<div class="article-hero"><svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="400" fill="url(#g)"/><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1828"/><stop offset="1" stop-color="#1a1830"/></linearGradient></defs><text x="600" y="180" text-anchor="middle" font-family="monospace" font-size="72" fill="white" opacity="0.06">&lt;?php</text><rect x="100" y="240" width="450" height="80" rx="8" fill="white" opacity="0.03"/><rect x="120" y="260" width="120" height="14" rx="4" fill="#6366f1" opacity="0.3"/><rect x="120" y="290" width="300" height="10" rx="4" fill="white" opacity="0.05"/><rect x="650" y="240" width="450" height="80" rx="8" fill="white" opacity="0.03"/><rect x="670" y="260" width="120" height="14" rx="4" fill="#f59e0b" opacity="0.3"/><rect x="670" y="290" width="300" height="10" rx="4" fill="white" opacity="0.05"/></svg></div>
+<div class="article-hero"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=400&fit=crop" alt="WordPress plugin development code" loading="lazy"></div>
 <div class="article-body">
 <span class="article-tag">WordPress</span>
 <h1>Custom plugins: build once, reuse everywhere</h1>
 <div class="article-meta"><span>Ahmad Alawieh</span><span>February 2026</span><span>6 min read</span></div>
-<p>Over the years I have built investor portals, moderation tools, and WooCommerce integrations as WordPress plugins.</p><h2>The plugin skeleton</h2><p>Every plugin follows the same proven structure: main file, includes/, admin/, public/. This consistency means I can start a new plugin in under an hour.</p><h2>Security by default</h2><p>Every query uses prepared statements, every form uses nonces, every output is escaped. Security best practices baked in from day one.</p><h2>Real-world example: B1 Investor Portal</h2><p>Built for a finance client, this plugin manages per-user dashboards, documents, portfolio tracking, and payment history — all within WordPress. 30+ investors onboarded in the first month.</p><p>The same skeleton powers moderation tools, reaction systems, and WooCommerce integrations.</p>
+<p>Over the years I have built investor portals, moderation tools, and WooCommerce integrations as WordPress plugins.</p><h2>The plugin skeleton</h2><p>Every plugin follows the same proven structure: main file, includes/, admin/, public/. This consistency means I can start a new plugin in under an hour.</p><h2>Security by default</h2><p>Every query uses prepared statements, every form uses nonces, every output is escaped. Security best practices baked in from day one.</p><h2>Real-world example: B1 Investor Portal</h2><p>Built for a finance client, this plugin manages per-user dashboards, documents, portfolio tracking, and payment history ï¿½ all within WordPress. 30+ investors onboarded in the first month.</p><p>The same skeleton powers moderation tools, reaction systems, and WooCommerce integrations.</p>
 </div>
 </div>
 </main>
