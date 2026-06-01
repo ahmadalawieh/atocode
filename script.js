@@ -202,3 +202,16 @@ if (counters.length && "IntersectionObserver" in window) {
   
   counters.forEach((counter) => counterObserver.observe(counter));
 }
+
+/* ─── Back to Top Button ─── */
+const backToTop = document.querySelector(".back-to-top");
+
+if (backToTop) {
+  window.addEventListener("scroll", () => {
+    backToTop.classList.toggle("is-visible", window.scrollY > 600);
+  });
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
