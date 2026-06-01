@@ -203,7 +203,7 @@ if (counters.length && "IntersectionObserver" in window) {
   counters.forEach((counter) => counterObserver.observe(counter));
 }
 
-/* ─── Back to Top Button ─── */
+/* ─── Back to Top Button ── */
 const backToTop = document.querySelector(".back-to-top");
 
 if (backToTop) {
