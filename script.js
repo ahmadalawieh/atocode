@@ -208,7 +208,7 @@ const backToTop = document.querySelector(".back-to-top");
 
 if (backToTop) {
   window.addEventListener("scroll", () => {
-    backToTop.classList.toggle("is-visible", window.scrollY > 600);
+    backToTop.classList.toggle("is-visible", window.scrollY > 400);
   });
 
   backToTop.addEventListener("click", () => {
