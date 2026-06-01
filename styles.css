@@ -1543,58 +1543,6 @@ textarea:focus-visible {
   }
 }
 
-@media (max-width: 768px) {
-  :root {
-    --page-x: 20px;
-  }
-  
-  .nav,
-  .header-actions {
-    display: none;
-  }
-  
-  .menu-toggle {
-    display: flex;
-  }
-  
-  .mobile-nav {
-    display: block;
-  }
-  
-  .mobile-header-actions {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .mobile-header-actions .theme-toggle,
-  .mobile-header-actions .menu-toggle {
-    display: flex;
-  }
-  
-  .site-header {
-    padding: 0 20px;
-  }
-  
-  .hero-stats {
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  
-  .hero-stats-item {
-    min-width: 100px;
-  }
-  
-  .section {
-    padding: 60px var(--page-x);
-  }
-  
-  .packages-section,
-  .work-section,
-  .testimonials-section {
-    padding: 60px var(--page-x);
-  }
-
 .faq-section {
   background: var(--bg-soft);
   padding: 100px var(--page-x);
@@ -1657,7 +1605,59 @@ textarea:focus-visible {
   font-size: 0.95rem;
 }
 
-.contact-section {
+@media (max-width: 768px) {
+  :root {
+    --page-x: 20px;
+  }
+  
+  .nav,
+  .header-actions {
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .mobile-nav {
+    display: block;
+  }
+  
+  .mobile-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .mobile-header-actions .theme-toggle,
+  .mobile-header-actions .menu-toggle {
+    display: flex;
+  }
+  
+  .site-header {
+    padding: 0 20px;
+  }
+  
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .hero-stats-item {
+    min-width: 100px;
+  }
+  
+  .section {
+    padding: 60px var(--page-x);
+  }
+  
+  .packages-section,
+  .work-section,
+  .testimonials-section {
+    padding: 60px var(--page-x);
+  }
+
+  .contact-section {
     padding: 60px var(--page-x);
   }
   
