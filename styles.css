@@ -1572,14 +1572,15 @@ textarea:focus-visible {
   gap: 48px;
 }
 
-.logo-item svg {
-  height: 28px;
+.logo-item img {
+  height: 32px;
   width: auto;
-  transition: opacity 200ms ease;
+  filter: grayscale(100%) opacity(0.5);
+  transition: all 200ms ease;
 }
 
-.logo-item:hover svg {
-  opacity: 1;
+.logo-item:hover img {
+  filter: grayscale(0%) opacity(1);
 }
 
 .process-section {
