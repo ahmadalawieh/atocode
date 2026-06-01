@@ -7,7 +7,7 @@
 <meta name="description" content="How I structure WordPress plugins for maintainability, security, and reusability across client projects.">
 <meta property="og:title" content="Custom plugins: build once, reuse everywhere">
 <meta property="og:description" content="How I structure WordPress plugins for maintainability, security, and reusability across client projects.">
-<meta property="og:image" content="https://www.atocode.online/og-image.svg">
+<meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=630&fit=crop">
 <script defer data-domain="atocode.online" src="https://plausible.io/js/script.js"></script>`n<link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preload" href="components.js" as="script">`n<link rel="stylesheet" href="../styles.css">
 <style>
@@ -25,8 +25,9 @@
 </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to content</a>
 <header class="site-header" id="site-header"></header>
-<main>
+<main id="main">
 <div class="article-content">
 <div class="article-hero"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=400&fit=crop" alt="WordPress plugin development code" loading="lazy"></div>
 <div class="article-body">
@@ -34,6 +35,20 @@
 <h1>Custom plugins: build once, reuse everywhere</h1>
 <div class="article-meta"><span>Ahmad Alawieh</span><span>February 2026</span><span>6 min read</span></div>
 <p>Over the years I have built investor portals, moderation tools, and WooCommerce integrations as WordPress plugins.</p><h2>The plugin skeleton</h2><p>Every plugin follows the same proven structure: main file, includes/, admin/, public/. This consistency means I can start a new plugin in under an hour.</p><h2>Security by default</h2><p>Every query uses prepared statements, every form uses nonces, every output is escaped. Security best practices baked in from day one.</p><h2>Real-world example: B1 Investor Portal</h2><p>Built for a finance client, this plugin manages per-user dashboards, documents, portfolio tracking, and payment history � all within WordPress. 30+ investors onboarded in the first month.</p><p>The same skeleton powers moderation tools, reaction systems, and WooCommerce integrations.</p>
+
+<div class="related-articles">
+  <h3>Read next</h3>
+  <div class="related-grid">
+    <a href="hosting-uptime.html" class="related-card">
+      <span class="related-tag">Hosting</span>
+      <h4>How I keep client sites at 99.9% uptime</h4>
+    </a>
+    <a href="freelancing-partner.html" class="related-card">
+      <span class="related-tag">Freelancing</span>
+      <h4>Going from solo dev to trusted partner</h4>
+    </a>
+  </div>
+</div>
 </div>
 </div>
 </main>
