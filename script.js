@@ -1,8 +1,10 @@
 /* ATOCODE Website — v2.7.0 */
 
+document.documentElement.classList.add("js");
+
 const siteHeader = document.querySelector(".site-header");
-const menuToggle = document.querySelector(".menu-toggle");
-const mobileMenuToggle = document.querySelector(".mobile-header-actions .menu-toggle");
+const menuToggle = document.querySelector(".mobile-header-actions .menu-toggle");
+const mobileNav = document.querySelector("#mobileNav");
 const revealItems = document.querySelectorAll("[data-reveal]");
 
 if (siteHeader) {
@@ -18,17 +20,42 @@ if (siteHeader) {
   });
 }
 
-const toggleMobileMenu = () => {
-  siteHeader?.classList.toggle("is-open");
+const setMobileMenuOpen = (isOpen, { returnFocus = false } = {}) => {
+  if (!siteHeader || !menuToggle || !mobileNav) return;
+
+  siteHeader.classList.toggle("is-open", isOpen);
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+
+  if (isOpen) {
+    mobileNav.hidden = false;
+  } else {
+    mobileNav.hidden = true;
+    if (returnFocus) menuToggle.focus();
+  }
 };
 
-menuToggle?.addEventListener("click", toggleMobileMenu);
-mobileMenuToggle?.addEventListener("click", toggleMobileMenu);
+menuToggle?.addEventListener("click", () => {
+  const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+  setMobileMenuOpen(!isOpen);
+});
 
 document.querySelectorAll(".mobile-nav a").forEach((link) => {
   link.addEventListener("click", () => {
-    siteHeader?.classList.remove("is-open");
+    setMobileMenuOpen(false);
   });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && siteHeader?.classList.contains("is-open")) {
+    setMobileMenuOpen(false, { returnFocus: true });
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (!siteHeader?.classList.contains("is-open")) return;
+  if (siteHeader.contains(event.target)) return;
+  setMobileMenuOpen(false);
 });
 
 const themeToggle = document.querySelector(".theme-toggle");
@@ -124,7 +151,7 @@ contactForm?.addEventListener("submit", async (event) => {
 
   try {
     const formData = new FormData(contactForm);
-    formData.append("_subject", "ATOCODE project inquiry from " + formData.get("name"));
+    formData.append("_subject", "ATOCODE free website audit request from " + formData.get("name"));
 
     const response = await fetch("https://formspree.io/f/mzdwydpa", {
       method: "POST",
@@ -133,7 +160,7 @@ contactForm?.addEventListener("submit", async (event) => {
     });
 
     if (response.ok) {
-      formStatus.textContent = "Message sent. I'll get back to you within 24 hours.";
+      formStatus.textContent = "Audit request sent. I'll reply within 24 hours with the next step.";
       formStatus.className = "form-status form-success";
       contactForm.reset();
     } else {
@@ -146,7 +173,7 @@ contactForm?.addEventListener("submit", async (event) => {
   }
 
   submitBtn.disabled = false;
-  submitBtn.textContent = "Send Message";
+  submitBtn.textContent = "Request a Free Audit";
 });
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -154,8 +181,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute("href"));
     if (target) {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       target.scrollIntoView({
-        behavior: "smooth",
+        behavior: reduceMotion ? "auto" : "smooth",
         block: "start",
       });
     }
@@ -212,6 +240,7 @@ if (backToTop) {
   });
 
   backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
   });
 }
