@@ -138,8 +138,11 @@
             I create responsive websites, polished interfaces, and reliable infrastructure that help businesses grow and stay online.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#contact">Start a Project</a>
+            <a class="button primary" href="#contact">Request Free Audit</a>
             <a class="button secondary" href="#work">View Portfolio</a>
+          </div>
+          <div class="hero-audit-note">
+            Free 3-point website audit for clinics and local businesses: mobile booking, page clarity, and trust signals.
           </div>
           <div class="hero-stats">
             <div class="hero-stats-item">
@@ -287,7 +290,53 @@
               <span>Backups</span>
             </div>
             </article>
+
+          <article class="service-card service-card-highlight" data-reveal>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 11l3 3L22 4"/>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              </svg>
+            </div>
+            <h3>Website Audit</h3>
+            <p>A focused 3-point review for clinics and local businesses that want more calls, WhatsApp messages, and consultation requests.</p>
+            <div class="service-tags">
+              <span>Free Review</span>
+              <span>Mobile CTA</span>
+              <span>Conversion</span>
+            </div>
+            </article>
           </div>
+      </section>
+
+      <section class="audit-section" id="audit">
+        <div class="audit-inner">
+          <div class="audit-content" data-reveal>
+            <span class="eyebrow">Free Audit</span>
+            <h2>Get a 3-point website audit before you invest in a redesign.</h2>
+            <p>
+              I review your website like a potential customer would and send practical notes on the fixes most likely to turn visitors into inquiries.
+            </p>
+            <a class="button primary" href="#contact">Request Free Audit</a>
+          </div>
+          <div class="audit-points">
+            <article class="audit-point" data-reveal>
+              <span>01</span>
+              <h3>Mobile booking path</h3>
+              <p>Can visitors quickly call, WhatsApp, or book from their phone without searching?</p>
+            </article>
+            <article class="audit-point" data-reveal>
+              <span>02</span>
+              <h3>Service page clarity</h3>
+              <p>Do high-value services explain the problem, outcome, proof, and next step clearly?</p>
+            </article>
+            <article class="audit-point" data-reveal>
+              <span>03</span>
+              <h3>Trust signals</h3>
+              <p>Are reviews, doctor/team profiles, case studies, and results close to the call-to-action?</p>
+            </article>
+          </div>
+        </div>
       </section>
 
       <section class="process-section" id="process">
@@ -830,6 +879,7 @@
                     <option value="">Choose a service</option>
                     <option>Web Development</option>
                     <option>UI Design</option>
+                    <option>Free 3-Point Website Audit</option>
                     <option>Hosting Setup</option>
                     <option>Maintenance</option>
                     <option>Full Package</option>
@@ -846,10 +896,15 @@
                   </select>
                 </div>
               </div>
+
+              <div class="form-group">
+                <label for="website">Website URL</label>
+                <input type="url" id="website" name="website" placeholder="https://example.com" autocomplete="url">
+              </div>
               
               <div class="form-group">
                 <label for="message">Project Details</label>
-                <textarea id="message" name="message" rows="4" placeholder="Tell me about your project, goals, and timeline..." required></textarea>
+                <textarea id="message" name="message" rows="4" placeholder="Tell me about your project, goals, timeline, or what you want reviewed..." required></textarea>
               </div>
               
               <button type="submit" class="button primary form-submit">Send Message</button>

@@ -360,6 +360,7 @@ textarea:focus-visible {
 .light-mode .code-title,
 .light-mode .floating-card,
 .light-mode .service-card,
+.light-mode .audit-point,
 .light-mode .package-card,
 .light-mode .work-card,
 .light-mode .contact-form-wrapper,
@@ -730,6 +731,11 @@ textarea:focus-visible {
   transform: scaleX(1);
 }
 
+.service-card-highlight {
+  border-color: rgba(245, 158, 11, 0.35);
+  background: linear-gradient(180deg, var(--panel-strong), var(--panel));
+}
+
 .service-icon {
   display: flex;
   align-items: center;
@@ -774,6 +780,84 @@ textarea:focus-visible {
   border-radius: 6px;
   font-size: 0.8rem;
   color: var(--faint);
+}
+
+.hero-audit-note {
+  max-width: 560px;
+  margin-top: 18px;
+  padding: 14px 16px;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 10px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.audit-section {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 100px var(--page-x);
+}
+
+.audit-inner {
+  max-width: var(--max-site);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.audit-content h2 {
+  margin-bottom: 20px;
+}
+
+.audit-content p {
+  max-width: 560px;
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.audit-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.audit-point {
+  min-height: 250px;
+  padding: 28px 24px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+}
+
+.audit-point span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 22px;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.audit-point h3 {
+  margin-bottom: 12px;
+}
+
+.audit-point p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .packages-section {
@@ -2136,8 +2220,22 @@ a:focus-visible, button:focus-visible {
   
   .packages-section,
   .work-section,
-  .testimonials-section {
+  .testimonials-section,
+  .audit-section {
     padding: 60px var(--page-x);
+  }
+
+  .audit-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .audit-points {
+    grid-template-columns: 1fr;
+  }
+
+  .audit-point {
+    min-height: auto;
   }
 
   .contact-section {
