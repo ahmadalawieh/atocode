@@ -25,12 +25,23 @@ for (const locale of ["en", "ar"]) {
   }
 }
 const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
-for (const route of ["/work", "/work/b1-ventures", "/services", "/hire", "/audit", "/blog", "/blog/wordpress-plugins", "/about", "/contact", "/privacy", "/checklist", "/ar/work", "/ar/audit"]) {
+for (const route of ["/work", "/work/b1-ventures", "/services", "/hire", "/audit", "/blog", "/blog/wordpress-plugins", "/about", "/contact", "/privacy", "/checklist", "/ar/work", "/ar/audit", "/ar/hire"]) {
   const response = await page.goto(`${origin}${route}`, { waitUntil: "domcontentloaded" });
   const h1 = await page.locator("h1").first().textContent();
-  if (response.status() !== 200 || !h1) failures++;
-  console.log(JSON.stringify({ route, status: response.status(), h1 }));
+  const h1Count = await page.locator("h1").count();
+  if (response.status() !== 200 || !h1 || h1Count !== 1) failures++;
+  console.log(JSON.stringify({ route, status: response.status(), h1, h1Count }));
 }
+await page.goto(`${origin}/hire`, { waitUntil: "domcontentloaded" });
+const cvLink = await page.getByRole("link", { name: /Download my CV/ }).getAttribute("href");
+const cv = await page.request.get(`${origin}${cvLink}`);
+const cvValid = cv.status() === 200 && (await cv.body()).subarray(0, 4).toString() === "%PDF";
+if (!cvValid) failures++;
+console.log(JSON.stringify({ cvLink, cvValid }));
+await page.goto(`${origin}/ar`, { waitUntil: "domcontentloaded" });
+const arabicFont = await page.locator("h1").evaluate((el) => getComputedStyle(el).fontFamily);
+if (!arabicFont.includes("Cairo")) failures++;
+console.log(JSON.stringify({ arabicFont }));
 for (const oldPath of ["/blog.html", "/checklist.html", "/privacy.html", "/articles/wordpress-plugins.html"]) {
   const redirect = await page.request.get(`${origin}${oldPath}`, { maxRedirects: 0 });
   if (redirect.status() !== 301) failures++;
@@ -57,6 +68,12 @@ const menuVisible = await mobile.locator(".mobile-nav nav").isVisible();
 if (!menuVisible) failures++;
 console.log(JSON.stringify({ mobileMenuVisible: menuVisible }));
 await mobile.close();
+const reduced = await browser.newPage({ reducedMotion: "reduce" });
+await reduced.goto(origin, { waitUntil: "domcontentloaded" });
+const reducedDuration = await reduced.locator(".hero-media").evaluate((el) => getComputedStyle(el).animationDuration);
+if (parseFloat(reducedDuration) > .01) failures++;
+console.log(JSON.stringify({ reducedMotionDuration: reducedDuration }));
+await reduced.close();
 await browser.close();
 console.log(`QA failures: ${failures}`);
 process.exitCode = failures ? 1 : 0;

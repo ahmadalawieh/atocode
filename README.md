@@ -20,7 +20,7 @@ Open `http://localhost:3000`. The contact and audit forms use the previous site'
 - Add real project captures to `public/projects/` and update each JSON record's `image` and `alt` fields.
 - `TODO.md` lists claims and assets that need verification. Do not publish unverified results or testimonials.
 
-The build runs `scripts/generate-og.mjs` to create 1200×630 PNG Open Graph images for each page and article. If you change titles, rebuild before deployment. The résumé link intentionally points to a clearly labeled placeholder PDF until a real one is supplied.
+The build runs `scripts/generate-og.mjs` to create 1200×630 PNG Open Graph images for each page and article. If you change titles, rebuild before deployment. The CV download uses the PDF supplied by Ahmad in October 2026; replace `public/Ahmad_Alawieh_CV.pdf` when that document changes.
 
 ## Checks
 

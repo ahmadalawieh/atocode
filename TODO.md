@@ -1,6 +1,6 @@
 # Items for Ahmad to verify
 
-- TODO(ahmad): Replace `public/resume-placeholder.pdf` with a real, current résumé. Add verified role titles, employers, dates, education, preferred roles, engagement types, and availability to `/hire`.
+- TODO(ahmad): Confirm preferred roles, engagement types, and current availability for `/hire`. The role dates and education now come from the supplied CV.
 - TODO(ahmad): Confirm which portfolio projects you personally owned and each project's exact role, stack, timeline, and live URL. Secondary work cards deliberately avoid detailed claims until verified.
 - TODO(ahmad): Provide approved screenshots of private B1 Ventures portal views. Only the public website is shown now; do not publish investor data.
 - TODO(ahmad): Supply a real DanaLand screenshot. The live domain timed out during capture; a clearly labeled placeholder is shown meanwhile.
